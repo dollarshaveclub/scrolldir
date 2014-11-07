@@ -12,6 +12,7 @@
 
 (function($) {
 
+  var $document = $(document);
   var $html = $('html');
   var $window = $(window);
   var defaults = {
@@ -50,6 +51,11 @@
     var max = dir === 'down' ? Math.max : Math.min;
     var min = dir === 'down' ? Math.min : Math.max;
     var zero = dir === 'down' ? 0 : Infinity;
+
+    // Apply bounds to handle rubber banding
+    var y_max = $document.height() - $window.height();
+    y = Math.max(0, y);
+    y = Math.min(y_max, y);
 
     // Update history
     history.push({ y: y, t: t });
