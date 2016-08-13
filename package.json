@@ -1,0 +1,24 @@
+{
+  "name": "scroll-intent",
+  "version": "1.0.0",
+  "description": "sets html[scroll-intent=\"down\"] or html[scroll-intent=\"up\"]",
+  "main": "scroll-intent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwfisher/scroll-intent.js.git"
+  },
+  "keywords": [
+    "jquery",
+    "scroll",
+    "intent"
+  ],
+  "author": "Patrick Fisher <patrick@pwfisher.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pwfisher/scroll-intent.js/issues"
+  },
+  "homepage": "https://github.com/pwfisher/scroll-intent.js#readme"
+}
