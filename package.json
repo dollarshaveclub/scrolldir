@@ -1,10 +1,14 @@
 {
   "name": "scroll-intent",
-  "version": "1.0.0",
-  "description": "sets html[scroll-intent=\"down\"] or html[scroll-intent=\"up\"]",
+  "version": "1.0.1",
+  "description": "Scroll Intent maintains whether a webpage is being scrolled up or down",
   "main": "scroll-intent.js",
+  "file": [
+    "dist",
+    "scroll-intent.js"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -13,12 +17,37 @@
   "keywords": [
     "jquery",
     "scroll",
-    "intent"
+    "intent",
+    "scroll position",
+    "javascript",
+    "window",
+    "position"
   ],
   "author": "Patrick Fisher <patrick@pwfisher.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pwfisher/scroll-intent.js/issues"
   },
-  "homepage": "https://github.com/pwfisher/scroll-intent.js#readme"
+  "homepage": "https://github.com/pwfisher/scroll-intent.js#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "bower": "^1.7.9",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-header": "^1.8.8",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "node-qunit-phantomjs": "^1.4.0",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1"
+  }
 }

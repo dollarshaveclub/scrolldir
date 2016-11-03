@@ -1,0 +1,27 @@
+{
+  "name": "scroll-intent",
+  "description": "Scroll Intent maintains whether a webpage is being scrolled up or down",
+  "main": "scroll-intent.js",
+  "authors": [
+    "Patrick Fisher <patrick@pwfisher.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "scroll",
+    "intent",
+    "scroll",
+    "position",
+    "javascript",
+    "window",
+    "position"
+  ],
+  "homepage": "https://github.com/yowainwright/scroll-intent.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
