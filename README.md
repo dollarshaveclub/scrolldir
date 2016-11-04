@@ -34,9 +34,15 @@ Now you have a hook to use in your CSS.
 
 It’s that simple! It just works. Perfectly. Like magic.
 
-
 ## Example
 [JS Bin demo](http://jsbin.com/zeriyu/)
 
 ## In the wild
 [Dollarshaveclub Content](http://content.dollarshaveclub.com)
+
+## Contributing
+
+```
+rollup -c           # build `dist/scroll-intent.js`
+gulp                # test and build `dist/scroll-intent.min.js`
+```

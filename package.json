@@ -30,9 +30,6 @@
   },
   "homepage": "https://github.com/pwfisher/scroll-intent.js#readme",
   "dependencies": {
-    "gulp": "^3.9.1"
-  },
-  "devDependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
     "bower": "^1.7.9",
     "eslint": "^3.9.1",
