@@ -34,13 +34,20 @@ Now you have a hook to use in your CSS.
 
 It’s that simple! It just works. Perfectly. Like magic.
 
-## Example
-[JS Bin demo](http://jsbin.com/zeriyu/)
+### Example
+[JS Bin demo](http://jsbin.com/xoxiniwumi)
 
-## In the wild
+### In the wild
 [Dollarshaveclub Content](http://content.dollarshaveclub.com)
 
-## Contributing
+## Notes
+
+If you want to stop the scroll event handler when it is not needed (for optimal performance):
+```javascript
+$(window).scrollIntent('off');
+```
+
+### Contributing
 
 ```
 rollup -c           # build `dist/scroll-intent.js`

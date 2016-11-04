@@ -39,8 +39,8 @@ const tick = function tickFunc() {
   y = Math.min(yMax, y);
 
   // Update history
-  history.push({ y, t });
-  history.shift();
+  history.unshift({ y, t });
+  history.pop();
 
   // Are we continuing in the same direction?
   if (y === furthest(pivot, y)) {
@@ -51,12 +51,14 @@ const tick = function tickFunc() {
   }
   // else we have backed off high-water mark
 
-  // Find "high-water mark" in history since pivotTime/expiry
-  const cutoffTime = Math.max(pivotTime, t - options.history_max_age);
-  pivot = dir === 'down' ? 0 : Infinity;
-  for (let i = 0; i < options.history_length; i += 1) {
-    if (history[i] && history[i].t < cutoffTime) break;
-    pivot = furthest(pivot, history[i].y);
+  // Apply max age to find current reference point
+  const cutoffTime = t - options.history_max_age;
+  if (cutoffTime > pivotTime) {
+    pivot = y;
+    for (let i = 0; i < options.history_length; i += 1) {
+      if (!history[i] || history[i].t < cutoffTime) break;
+      pivot = furthest(pivot, history[i].y);
+    }
   }
 
   // Have we exceeded threshold?

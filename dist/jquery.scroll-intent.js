@@ -45,8 +45,8 @@ var tick = function tickFunc() {
   y = Math.min(yMax, y);
 
   // Update history
-  history.push({ y: y, t: t });
-  history.shift();
+  history.unshift({ y: y, t: t });
+  history.pop();
 
   // Are we continuing in the same direction?
   if (y === furthest(pivot, y)) {
@@ -57,12 +57,14 @@ var tick = function tickFunc() {
   }
   // else we have backed off high-water mark
 
-  // Find "high-water mark" in history since pivotTime/expiry
-  var cutoffTime = Math.max(pivotTime, t - options.history_max_age);
-  pivot = dir === 'down' ? 0 : Infinity;
-  for (var i = 0; i < options.history_length; i += 1) {
-    if (history[i] && history[i].t < cutoffTime) break;
-    pivot = furthest(pivot, history[i].y);
+  // Apply max age to find current reference point
+  var cutoffTime = t - options.history_max_age;
+  if (cutoffTime > pivotTime) {
+    pivot = y;
+    for (var i = 0; i < options.history_length; i += 1) {
+      if (!history[i] || history[i].t < cutoffTime) break;
+      pivot = furthest(pivot, history[i].y);
+    }
   }
 
   // Have we exceeded threshold?
@@ -72,7 +74,6 @@ var tick = function tickFunc() {
     dir = dir === 'down' ? 'up' : 'down';
     $html.attr('scroll-intent', dir);
   }
-  return;
 };
 
 var handler = function handlerFunc(event) {
