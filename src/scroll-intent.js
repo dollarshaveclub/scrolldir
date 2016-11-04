@@ -16,9 +16,9 @@ const $html = $('html');
 const $window = $(window);
 
 const defaults = {
-  history_length: 100,
-  history_max_age: 1000,
-  threshold_pixels: 100,
+  history_length: 32,
+  history_max_age: 512,
+  threshold_pixels: 64,
 };
 
 const options = defaults;
