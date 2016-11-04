@@ -1,28 +1,42 @@
 # scroll-intent.js
 
-> Scroll Intent maintains whether a webpage is being scrolled up or down
+__Scroll-Intent__ is a micro library that does one thing __perfectly__: track whether a user is scrolling up or down.
+This is useful for tracking events and dealing with sticky or fixed elements.
 
-Scroll intent is a jQuery plugin that maintains a webpages scrolled direction by setting an attribute in the <html> tag to _up_ or _down_.
+Ever been annoyed by fixed headers which pop up if you accidentally touch your screen the wrong way?
+Or you scroll down but your finger drifts up just a little bit at the end and now your view is blocked by huge toolbars?
 
-In example:
+The key logic which makes this plugin special is its ability to ignore small movements.
+It will only change direction when the user scrolls a significant amount, when the user has __intent__ to scroll in that direction.
+
+## Usage
+Scroll-Intent is dead simple to use.
+
+```javascript
+$(window).scrollIntent();
 ```
+
+Scroll-intent will set the `scroll-intent` attribute on the `<html>` element to `up` or `down`:
+
+```html
 <html scroll-intent="up">
 ```
 or
-```
+```html
 <html scroll-intent="down">
 ```
-It's that simple! And it works simply well!💪
 
-## Usage
+Now you have a hook to use in your CSS.
+
+```css
+[scroll-intent="down"] #my-fixed-header { display: none; }
 ```
-$(window).scrollIntent();
-```
+
+It’s that simple! It just works. Perfectly. Like magic.
+
+
 ## Example
 [JS Bin demo](http://jsbin.com/zeriyu/)
 
 ## In the wild
 [Dollarshaveclub Content](http://content.dollarshaveclub.com)
-
-## Notes
-Scroll Intent is a micro jQuery lib that is meant to do 1 thing perfectly, maintain whether a webpage is scrolling up or down. This is useful for tracking events and dealing with sticky or fixed elements.
