@@ -4,35 +4,24 @@
   (global.scrollIntent = factory());
 }(this, (function () { 'use strict';
 
-/* global $, jquery, jQuery */
+/* global $ */
 
 //
 // scrollIntent
 //
 // Sets html[scroll-intent="up"] or html[scroll-intent="down"]
 //
-// Options:
-// off {bool} If true, removes scroll listener.
-// history_length {int} Ticks to keep in history.
-// history_max_age {int} History data time-to-live (ms).
-// threshold_pixels {int} Ignore moves smaller than this.
-//
 var $document = $(document);
 var $html = $('html');
 var $window = $(window);
-
-var defaults = {
-  history_length: 32,
-  history_max_age: 512,
-  threshold_pixels: 64
-};
-
-var options = defaults;
-var dir = void 0; // 'up' or 'down'
+var historyLength = 32; // Ticks to keep in history.
+var historyMaxAge = 512; // History data time-to-live (ms).
+var thresholdPixels = 64; // Ignore moves smaller than this.
+var history = Array(historyLength);
+var dir = 'down'; // 'up' or 'down'
 var e = void 0; // last scroll event
-var history = void 0; // data array
-var pivotTime = void 0; // "high-water mark" time
 var pivot = void 0; // "high-water mark"
+var pivotTime = 0;
 
 var tick = function tickFunc() {
   var y = $window.scrollTop();
@@ -58,17 +47,17 @@ var tick = function tickFunc() {
   // else we have backed off high-water mark
 
   // Apply max age to find current reference point
-  var cutoffTime = t - options.history_max_age;
+  var cutoffTime = t - historyMaxAge;
   if (cutoffTime > pivotTime) {
     pivot = y;
-    for (var i = 0; i < options.history_length; i += 1) {
+    for (var i = 0; i < historyLength; i += 1) {
       if (!history[i] || history[i].t < cutoffTime) break;
       pivot = furthest(pivot, history[i].y);
     }
   }
 
   // Have we exceeded threshold?
-  if (Math.abs(y - pivot) > options.threshold_pixels) {
+  if (Math.abs(y - pivot) > thresholdPixels) {
     pivot = y;
     pivotTime = t;
     dir = dir === 'down' ? 'up' : 'down';
@@ -82,14 +71,10 @@ var handler = function handlerFunc(event) {
 };
 
 function scrollIntent(o) {
-  if (o === 'off' || (o || {}).off) return $window.off('scroll', handler);
-  $.extend(options, o || {});
-  dir = 'down';
-  history = Array(options.history_length);
-  pivotTime = 0;
+  if (o === 'off') return $window.off('scroll', handler);
   pivot = $window.scrollTop();
-  $window.on('scroll', handler);
-  return $html.attr('scroll-intent', dir);
+  $html.attr('scroll-intent', dir);
+  return $window.on('scroll', handler);
 }
 
 var plugin = window.$ || window.jQuery || window.Zepto;

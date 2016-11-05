@@ -46,10 +46,3 @@ If you want to stop the scroll event handler when it is not needed (for optimal 
 ```javascript
 $(window).scrollIntent('off');
 ```
-
-### Contributing
-
-```
-rollup -c           # build `dist/scroll-intent.js`
-gulp                # test and build `dist/scroll-intent.min.js`
-```
