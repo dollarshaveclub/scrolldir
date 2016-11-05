@@ -1,7 +1,7 @@
 {
   "name": "scroll-intent",
   "version": "1.1.0",
-  "description": "Scroll-Intent tracks user scroll direction without jitter",
+  "description": "Track user scroll direction without jitter",
   "main": "scroll-intent.js",
   "file": [
     "dist",
