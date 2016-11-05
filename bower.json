@@ -1,7 +1,7 @@
 {
   "name": "scroll-intent",
-  "description": "Scroll Intent maintains whether a webpage is being scrolled up or down",
-  "main": "scroll-intent.js",
+  "description": "Track user scroll direction without jitter",
+  "main": "dist/jquery.scroll-intent.js",
   "authors": [
     "Patrick Fisher <patrick@pwfisher.com>"
   ],
@@ -10,13 +10,12 @@
     "jquery",
     "scroll",
     "intent",
-    "scroll",
+    "scrollTop",
     "position",
     "javascript",
-    "window",
-    "position"
+    "window"
   ],
-  "homepage": "https://github.com/yowainwright/scroll-intent.js",
+  "homepage": "https://github.com/pwfisher/scroll-intent.js",
   "ignore": [
     "**/.*",
     "node_modules",
