@@ -20,7 +20,7 @@ const banner = [
 gulp.task('test', () => qunit('tests/index.html'));
 
 gulp.task('minify', () => {
-  gulp.src('dist/jquery.scroll-intent.js')
+  gulp.src('dist/scrolldir.js')
   .pipe(uglify())
   .pipe(head(banner, { pkg }))
   .pipe(rename({ suffix: '.min' }))

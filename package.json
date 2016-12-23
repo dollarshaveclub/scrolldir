@@ -1,14 +1,14 @@
 {
-  "name": "scroll-intent",
-  "version": "1.1.1",
+  "name": "scrolldir",
+  "version": "0.0.1",
   "description": "Track user scroll direction without jitter",
-  "main": "dist/jquery.scroll-intent.js",
+  "main": "dist/scrolldir.min.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pwfisher/scroll-intent.js.git"
+    "url": "git+https://github.com/dollarshaveclub/scrolldir.git"
   },
   "keywords": [
     "jquery",
@@ -22,9 +22,9 @@
   "author": "Patrick Fisher <patrick@pwfisher.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pwfisher/scroll-intent.js/issues"
+    "url": "https://github.com/dollarshaveclub/scrolldir.git/issues"
   },
-  "homepage": "https://github.com/pwfisher/scroll-intent.js",
+  "homepage": "https://github.com/dollarshaveclub/scrolldir.git",
   "dependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
     "bower": "^1.7.9",
