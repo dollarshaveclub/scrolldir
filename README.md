@@ -1,4 +1,4 @@
-# ScrollDir
+# ScrollDir 🔺 || 🔺
 
 _ScrollDir_ is a micro Javascript library that perfectly describes a user vertical scroll direction in a `data attribute`. From there, you can do what you want with scrolldir.
 
