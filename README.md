@@ -1,11 +1,11 @@
-# ScrollDir 🔺 || 🔺
+# ScrollDir 🔺 || 🔻
 
-_ScrollDir_ is a micro Javascript library that perfectly describes a user vertical scroll direction in a `data attribute`. From there, you can do what you want with scrolldir.
+_ScrollDir_ is a micro Javascript library that perfectly describes user vertical scroll direction in a html data attribute. From there, you can do what you want with Scrolldir.
 
 ### Scrolldir is perfect for:
 -  showing or hiding fixed or sticky elements based on scroll direction.
 -  tracking scroll direction
--  **ignore small movements** that cause unwanted sticky and fixed things to jitter or showup. Scrolldir will only change direction when the user scrolls a significant vertical amount.
+-  **ignoring small scroll movements** that cause unwanted sticky and fixed things to jitter or showup. Scrolldir will only change direction when the user scrolls a significant vertical amount.
 
 ## Installing from a package manager
 
@@ -65,5 +65,6 @@ scrolldir({off});
 ```
 
 ## Examples
+
 TODO
 
