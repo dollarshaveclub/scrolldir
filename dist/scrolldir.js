@@ -5,6 +5,15 @@
 }(this, (function () { 'use strict';
 
 function scrollDir(opts) {
+  var defaults = {
+    el: document.documentElement,
+    attribute: 'data-scrolldir'
+  };
+  var el = opts && opts.el || defaults.el;
+  var attribute = opts && opts.attribute || defaults.attribute;
+  if (opts && opts.off === true) {
+    return el.setAttribute('data-scrolldir', 'off');
+  }
   var body = document.body;
   var historyLength = 32; // Ticks to keep in history.
   var historyMaxAge = 512; // History data time-to-live (ms).
@@ -14,12 +23,6 @@ function scrollDir(opts) {
   var e = void 0; // last scroll event
   var pivot = void 0; // "high-water mark"
   var pivotTime = 0;
-  var defaults = {
-    el: document.documentElement,
-    attribute: 'data-scrolldir'
-  };
-  var el = opts && opts.el || defaults.el;
-  var attribute = opts && opts.attribute || defaults.attribute;
 
   var tick = function tickFunc() {
     var y = window.scrollY;

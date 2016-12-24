@@ -1,48 +1,66 @@
-# scroll-intent.js
+# ScrollDir
 
-__Scroll-Intent__ is a micro library that does one thing __perfectly__: track whether a user is scrolling up or down.
-This is useful for tracking events and dealing with sticky or fixed elements.
+_ScrollDir_ is a micro Javascript library that perfectly describes a user vertical scroll direction in a `data attribute`. From there, you can do what you want with scrolldir.
 
-Ever been annoyed by fixed headers which pop up if you accidentally touch your screen the wrong way?
-Or you scroll down but your finger drifts up just a little bit at the end and now your view is blocked by huge toolbars?
+### Scrolldir is perfect for:
+-  showing or hiding fixed or sticky elements based on scroll direction.
+-  tracking scroll direction
+-  **ignore small movements** that cause unwanted sticky and fixed things to jitter or showup. Scrolldir will only change direction when the user scrolls a significant vertical amount.
 
-The key logic which makes this plugin special is its ability to ignore small movements.
-It will only change direction when the user scrolls a significant amount, when the user has __intent__ to scroll in that direction.
+## Installing from a package manager
 
-## Usage
-Scroll-Intent is dead simple to use.
-
-```javascript
-$(window).scrollIntent();
+npm
+```sh
+npm install scrolldir --save
+```
+bower
+```sh
+bower install scrolldir --save
+```
+yarn
+```sh
+yarn add scrolldir
 ```
 
-Scroll-intent will set the `scroll-intent` attribute on the `<html>` element to `up` or `down`:
+## Setup
+
+Add **dist/scrolldir.min.js**.
+
+## Basic Usage
+
+```javascript
+scrollDir();
+```
+By default ScrollDir will set the `data-scrolldir` attribute on the `<html>` element to `up` or `down`:
 
 ```html
-<html scroll-intent="up">
+<html data-scrolldir="up">
 ```
 or
 ```html
-<html scroll-intent="down">
+<html data-scrolldir="down">
 ```
 
-Now you have a hook to use in your CSS.
+You can then change your styling based on vertical scroll direction.
 
 ```css
-[scroll-intent="down"] #my-fixed-header { display: none; }
+[data-scrolldir="down"] #my-fixed-header { display: none; }
 ```
 
-It’s that simple! It just works. Perfectly. Like magic.
+## Options
 
-### Example
-[JS Bin demo](http://jsbin.com/xoxiniwumi)
-
-### In the wild
-[Dollarshaveclub Content](http://content.dollarshaveclub.com)
-
-## Notes
-
-If you want to stop the scroll event handler when it is not needed (for optimal performance):
+To use an attribute besides `data-scrolldir`:
 ```javascript
-$(window).scrollIntent('off');
-```
+scrolldir({attribute: 'new-attribute-name'});
+
+To add the Scrolldir attribute to a different element:
+```javascript
+scrolldir({el: 'your-new-selector'});
+
+To turn Scrolldir off:
+```javascript
+scrolldir({off});
+
+## Examples
+TODO
+
