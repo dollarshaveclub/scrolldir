@@ -52,14 +52,17 @@ You can then change your styling based on vertical scroll direction.
 To use an attribute besides `data-scrolldir`:
 ```javascript
 scrolldir({attribute: 'new-attribute-name'});
+```
 
 To add the Scrolldir attribute to a different element:
 ```javascript
 scrolldir({el: 'your-new-selector'});
+```
 
 To turn Scrolldir off:
 ```javascript
 scrolldir({off});
+```
 
 ## Examples
 TODO
