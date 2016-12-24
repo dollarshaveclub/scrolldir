@@ -12,7 +12,7 @@ export default function scrollDir(opts) {
     el: document.documentElement,
     attribute: 'data-scrolldir',
   };
-  const el = (opts && opts.target) || defaults.target;
+  const el = (opts && opts.el) || defaults.el;
   const attribute = (opts && opts.attribute) || defaults.attribute;
 
   const tick = function tickFunc() {

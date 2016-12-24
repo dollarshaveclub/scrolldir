@@ -7,7 +7,7 @@ export default {
   entry: 'src/scrolldir.js',
   dest: 'dist/scrolldir.js',
   format: 'umd',
-  moduleName: 'scrollIntent',
+  moduleName: 'scrollDir',
   sourceMap: false, // removes the souremap at the bottom of the file
   plugins: [
     resolve({

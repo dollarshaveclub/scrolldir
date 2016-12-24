@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.scrollIntent = factory());
+  (global.scrollDir = factory());
 }(this, (function () { 'use strict';
 
 function scrollDir(opts) {
@@ -18,7 +18,7 @@ function scrollDir(opts) {
     el: document.documentElement,
     attribute: 'data-scrolldir'
   };
-  var el = opts && opts.target || defaults.target;
+  var el = opts && opts.el || defaults.el;
   var attribute = opts && opts.attribute || defaults.attribute;
 
   var tick = function tickFunc() {
