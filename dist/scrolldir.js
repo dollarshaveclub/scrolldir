@@ -76,6 +76,15 @@ function scrollDir(opts) {
   return window.addEventListener('scroll', handler);
 }
 
+var plugin = window.$ || window.jQuery || window.Zepto;
+if (plugin) {
+  plugin.fn.extend({
+    scrollDir: function scrollDirFunc(o) {
+      return scrollDir(o);
+    }
+  });
+}
+
 return scrollDir;
 
 })));
