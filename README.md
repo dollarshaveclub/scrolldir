@@ -20,8 +20,9 @@ bower install scrolldir --save
 ```
 yarn
 ```sh
-yarn add scrolldir -->
+yarn add scrolldir 
 ```
+-->
 
 ## Setup 
 
