@@ -72,5 +72,7 @@ scrolldir({off: true});
 
 ## Examples coming very very very soonish 🌴
 
+This is a modular version of [pwfisher](https://github.com/pwfisher)'s' [scroll-intent](https://github.com/pwfisher/scroll-intent.js). ~TY!
+
 
 
