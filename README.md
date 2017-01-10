@@ -1,11 +1,11 @@
 
 [![Build Status](https://travis-ci.org/dollarshaveclub/scrolldir.svg?branch=master)](https://travis-ci.org/dollarshaveclub/scrolldir/)
 
-# ScrollDir 🔺 || 🔻
+# ScrollDir 🔺||🔻
 
-_ScrollDir_ is a micro Javascript library that perfectly describes user vertical scroll direction in a html data attribute. From there, do what want.💪
+_ScrollDir_ is a micro Javascript library that perfectly describes user vertical scroll direction in a html data attribute. From there, do what want.&nbsp;💪
 
-### Scrolldir is perfect for:
+### ScrollDir is perfect for:
 -  showing or hiding sticky elements based on scroll direction.
 -  tracking events on scroll direction
 -  **ignoring small scroll movements** that cause unwanted element jitters. 
@@ -16,11 +16,11 @@ _ScrollDir_ is a micro Javascript library that perfectly describes user vertical
 <!-- 
 npm
 ```sh
-npm install scrolldir --save
+npm install scrollDir --save
 ```
 bower
 ```sh
-bower install scrolldir --save
+bower install scrollDir --save
 ```
 yarn
 ```sh
@@ -67,7 +67,7 @@ scrolldir({el: 'your-new-selector'});
 
 To turn Scrolldir off:
 ```javascript
-scrolldir({off});
+scrolldir({off: true});
 ```
 
 ## Examples coming very very very soonish 🌴
