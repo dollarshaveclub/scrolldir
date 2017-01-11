@@ -11,9 +11,8 @@ _ScrollDir_ is a micro Javascript library that perfectly describes user vertical
 -  **ignoring small scroll movements** that cause unwanted element jitters. 
   -  Scrolldir will only change direction when the user scrolls a significant vertical amount.
 
-<!-- ## Installing from a package manager -->
-## Package manager install directions coming very very very soonish. 🌴
-<!-- 
+## Installing from a package manager 🌴
+
 npm
 ```sh
 npm install scrollDir --save
@@ -26,7 +25,6 @@ yarn
 ```sh
 yarn add scrolldir 
 ```
--->
 
 ## Setup 
 
@@ -70,9 +68,11 @@ To turn Scrolldir off:
 scrolldir({off: true});
 ```
 
-## Examples coming very very very soonish 🌴
+## Examples 🌴
 
-This is a modular version of [pwfisher](https://github.com/pwfisher)'s' [scroll-intent](https://github.com/pwfisher/scroll-intent.js). ~TY!
+- [scrolldir](http://codepen.io/yowainwright/pen/9d5a6c6dcf2c17e351dcccfe98158e8b) on codepen.
+
+This is a modular version of [pwfisher](https://github.com/pwfisher)'s [scroll-intent](https://github.com/pwfisher/scroll-intent.js). ~TY!
 
 
 
