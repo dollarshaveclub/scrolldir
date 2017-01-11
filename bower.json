@@ -1,6 +1,6 @@
 {
   "name": "scrolldir",
-  "description": "Track user scroll direction without jitter",
+  "description": "Prefectly track user scroll direction without the jitter",
   "main": "dist/scrolldir.js",
   "authors": [
     "Patrick Fisher <patrick@pwfisher.com>"
