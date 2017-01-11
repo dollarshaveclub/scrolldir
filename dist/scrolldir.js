@@ -7,12 +7,14 @@
 function scrollDir(opts) {
   var defaults = {
     el: document.documentElement,
+    win: window,
     attribute: 'data-scrolldir'
   };
   var el = opts && opts.el || defaults.el;
+  var win = opts && opts.win || defaults.win;
   var attribute = opts && opts.attribute || defaults.attribute;
   if (opts && opts.off === true) {
-    return el.setAttribute('data-scrolldir', 'off');
+    return el.setAttribute(attribute, 'off');
   }
   var body = document.body;
   var historyLength = 32; // Ticks to keep in history.
@@ -25,12 +27,12 @@ function scrollDir(opts) {
   var pivotTime = 0;
 
   var tick = function tickFunc() {
-    var y = window.scrollY;
+    var y = win.scrollY;
     var t = e.timeStamp;
     var furthest = dir === 'down' ? Math.max : Math.min;
 
     // Apply bounds to handle rubber banding
-    var yMax = body.offsetHeight - window.innerHeight;
+    var yMax = body.offsetHeight - win.innerHeight;
     y = Math.max(0, y);
     y = Math.min(yMax, y);
 
@@ -68,12 +70,12 @@ function scrollDir(opts) {
 
   var handler = function handlerFunc(event) {
     e = event;
-    window.requestAnimationFrame(tick);
+    win.requestAnimationFrame(tick);
   };
 
-  pivot = window.scrollY;
+  pivot = win.scrollY;
   el.setAttribute(attribute, dir);
-  return window.addEventListener('scroll', handler);
+  return win.addEventListener('scroll', handler);
 }
 
 var plugin = window.$ || window.jQuery || window.Zepto;
