@@ -1,5 +1,8 @@
 
 [![Build Status](https://travis-ci.org/dollarshaveclub/scrolldir.svg?branch=master)](https://travis-ci.org/dollarshaveclub/scrolldir/)
+[![npm version](https://badge.fury.io/js/scrolldir.svg)](https://www.npmjs.com/package/scrolldir)
+[![Bower version](https://badge.fury.io/bo/scrolldir.svg)](https://github.com/dollarshaveclub/scrolldir)
+[![Share](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000)](https://twitter.com/home?status=ScrollDir%2C%20a%20micro%20JS%20lib%20that%20describes%20vertical%20scroll%20direction.%20https%3A%2F%2Fgithub.com%2Fdollarshaveclub%2Fscrolldir%20by%20%40pfisher42%20co%20%40yowainwright%20%40DSCEngineering)
 
 # ScrollDir 🔺||🔻
 
