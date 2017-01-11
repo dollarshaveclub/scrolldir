@@ -4,7 +4,8 @@
   "description": "Track user scroll direction without jitter",
   "main": "dist/scrolldir.min.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "postpublish": "git tag $npm_package_version && git push origin --tags"
   },
   "repository": {
     "type": "git",
