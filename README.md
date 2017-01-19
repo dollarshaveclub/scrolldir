@@ -1,7 +1,7 @@
 <figure align="center">
   <img alt="scrolldir banner" src="https://cloud.githubusercontent.com/assets/1074042/22093384/09f3c2a6-ddba-11e6-8706-7e63be185448.jpg" />
-  <figcaption align="center">Prefectly track user scroll direction without the jitter</figcaption>
 </figure>
+<p align="center">Prefectly track user scroll direction without the jitter</p>
 
 <hr>
 
