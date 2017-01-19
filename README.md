@@ -5,14 +5,24 @@
 
 <hr>
 
-[![Build Status](https://travis-ci.org/dollarshaveclub/scrolldir.svg?branch=master)](https://travis-ci.org/dollarshaveclub/scrolldir/)
-[![npm version](https://badge.fury.io/js/scrolldir.svg)](https://www.npmjs.com/package/scrolldir)
-[![Bower version](https://badge.fury.io/bo/scrolldir.svg)](https://github.com/dollarshaveclub/scrolldir)
-[![Share](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000)](https://twitter.com/home?status=ScrollDir%2C%20a%20micro%20JS%20lib%20that%20describes%20vertical%20scroll%20direction.%20https%3A%2F%2Fgithub.com%2Fdollarshaveclub%2Fscrolldir%20by%20%40pfisher42%20co%20%40yowainwright%20%40DSCEngineering)
+<p align="center">
+  <a href="https://travis-ci.org/dollarshaveclub/scrolldir/">
+    <img alt="Build Status" src="https://travis-ci.org/dollarshaveclub/scrolldir.svg?branch=master" />
+  </a>
+  <a href="https://www.npmjs.com/package/scrolldir">
+    <img alt="npm version" src="https://badge.fury.io/js/scrolldir.svg" />
+  </a>
+  <a href="https://github.com/dollarshaveclub/scrolldir"> 
+    <img alt="Bower version" src="https://badge.fury.io/bo/scrolldir.svg" />
+  </a>
+  <a href="https://twitter.com/home?status=ScrollDir%2C%20a%20micro%20JS%20lib%20that%20describes%20vertical%20scroll%20direction.%20https%3A%2F%2Fgithub.com%2Fdollarshaveclub%2Fscrolldir%20by%20%40pfisher42%20co%20%40yowainwright%20%40DSCEngineering">
+    <img alt="Share on Twitter" src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000" />
+  </a>
+</p>
 
 <hr>
 
-<h1>ScrollDir 🔺||🔻</h1>
+<h1 align="center">ScrollDir 🔺||🔻</h1>
 
 _ScrollDir_ is a micro Javascript library that perfectly describes vertical scroll direction in a html data attribute. From there, do what want.&nbsp;💪
 
