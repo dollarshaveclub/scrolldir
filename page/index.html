@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="canonical" href="//dollarshaveclub.github.io/scrolldir">
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@DSCEngineering">
+  <meta name="twitter:url" property="og:url" content="https://dollarshaveclub.github.io/scrolldir/">
+  <meta name="twitter:title" property="og:title" content="ScrollDir is a minimal JavaScript Lib that describes user vertical scroll direction">
+  <meta name="twitter:description" property="og:description" content="ScrollDir is a minimal JavaScript Lib that describes user vertical scroll direction - by DSCEngineering">
+  <meta name="twitter:image" content="scrolldir-share-twitter.png">
+  <meta property="og:image" content="scrolldir-share-fb.png">
+  <title>ScrollDir is a minimal JavaScript Library that describes user vertical scroll direction</title>
+  <link href="styles.css" inline></link>
+</head>
+<body>
+  <div id="scrolldir-top" class="scrolldir scrolldir--top">
+    <p class="scrolldir__description">Scrolling Up 🙃</p>
+  </div>
+  <main id="main" class="main">
+    <header id="header" class="header">
+      <figure class="header__figure">
+        <img src="../scrolldir-gh-logo.svg" alt="Scrolldir" inline />
+        <figcaption class="header__figcaption">Prefectly describes vertical scroll direction without the jitter</figcaption>
+      </figure>
+      <h1 id="h1">ScrollDir</h1>
+      <p class="header__description">
+
+      </p>
+      <div class="repo-state">
+        <a class="share__link" href="https://travis-ci.org/dollarshaveclub/scrolldir/">
+          <img alt="Build Status" src="https://travis-ci.org/dollarshaveclub/scrolldir.svg?branch=master" />
+        </a>
+        <a class="share__link" href="https://www.npmjs.com/package/scrolldir">
+          <img alt="npm version" src="https://badge.fury.io/js/scrolldir.svg" />
+        </a>
+        <a class="share__link" href="https://github.com/dollarshaveclub/scrolldir">
+          <img alt="Bower version" src="https://badge.fury.io/bo/scrolldir.svg" />
+        </a>
+        <a class="share__link share__link--twitter" href="https://twitter.com/home?status=ScrollDir%2C%20a%20micro%20JS%20lib%20that%20describes%20vertical%20scroll%20direction.%20https%3A%2F%2Fgithub.com%2Fdollarshaveclub%2Fscrolldir%20by%20%40pfisher42%20co%20%40yowainwright%20%40DSCEngineering">
+          <img alt="Share on Twitter" src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000" />
+        </a>
+        <a class="share__link share__link--github" href="https://github.com/dollarshaveclub/scrolldir">
+          <img alt="github" src="https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star" />
+        </a>
+        <a class="share__link share__link--reddit" href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="//www.redditstatic.com/spreddit7.gif" alt="submit to reddit" border="0" />
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#setup">Setup</a>
+          </li>
+          <li class="header__item">
+            <a href="#usage">Usage</a>
+          </li>
+          <li class="header__item">
+            <a href="#usage">Options</a>
+          </li>
+          <li class="header__item">
+            <a href="https://github.com/dollarshaveclub/scrolldir">Github</a>
+          </li>
+          <li class="header__item">
+            <a href="https://github.com/dollarshaveclub/scrolldir/issues">Issues</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="description" class="section--description">
+      <h2>Why ScrollDir?</h2>
+      <h3>ScrollDir is perfect for:</h3>
+      <ul>
+        <li>showing or hiding sticky elements based on scroll direction.
+        <li>tracking events on scroll direction</li>
+        <li><strong>ignoring small scroll movements</strong> that cause unwanted element jitters.
+          <li>Scrolldir will only change direction when the user scrolls a significant vertical amount.</li>
+        </li>
+      </ul>
+    </section>
+    <section id="installation" class="section--installation">
+      <h2>Installing ScrollDir via a Package Manager</h2>
+      <p>yarn</p>
+      <div>
+        <pre>
+          <code>yarn add scrollDir</code>
+        </pre>
+      </div>
+      <p>npm</p>
+      <div>
+        <pre>
+          <code>npm install scrollDir --save</code>
+        </pre>
+      </div>
+      <p>bower</p>
+      <div>
+        <pre>
+          <code>bower install scrollDir --save</code>
+        </pre>
+      </div>
+       <h2>Setup</h2>
+      <p>Add <strong>dist/scrolldir.min.js</strong>.</p>
+    </section>
+    <section id="usage" class="section--usage">
+      <div>
+        <pre>
+          <code>
+            scrollDir();
+          </code>
+        </pre>
+      </div>
+      <p>By default ScrollDir will set the <code>data-scrolldir</code> attribute on the <code>&lt;html&gt;</code> element to <code>up</code> or <code>down</code>:</p>
+      <div>
+        <pre>
+          <code>
+            &lt;html data-scrolldir="up"&gt;
+          </code>
+        </pre>
+      </div>
+      <p>or</p>
+      <div>
+        <pre>
+          <code>
+            &lt;html data-scrolldir="down"&gt;
+          </code>
+        </pre>
+      </div>
+      <p>You can then change your styling based on vertical scroll direction.
+      </p>
+      <div>
+        <pre>
+          <code>
+            [data-scrolldir="down"] .my-fixed-header { display: none; }
+          </code>
+        </pre>
+      </div>
+    </section>
+    <section id="options" class="section--options">
+      <p>To use an attribute besides <code>data-scrolldir</code>:</p>
+      <div>
+        <pre>
+          <code>
+            scrollDir({attribute: 'new-attribute-name'});
+          </code>
+        </pre>
+      </div>
+      <p>To add the Scrolldir attribute to a different element:</p>
+      <div>
+        <pre>
+          <code>
+            scrollDir({el: 'your-new-selector'});
+          </code>
+        </pre>
+      </div>
+      <p>
+        To turn Scrolldir off:
+      </p>
+      <div>
+        <pre>
+          <code>
+            scrollDir({off: true});
+          </code>
+        </pre>
+      </div>
+    </section>
+    <section id="notes" class="section--noted">
+      <h2>Examples 🌴</h2>
+      <ul>
+        <li>
+          <a href="http://codepen.io/yowainwright/pen/9d5a6c6dcf2c17e351dcccfe98158e8b"></a>scrolldir</a> on codepen.
+        </li>
+      </ul>
+      <p>
+        This is a modular version of <a href="https://github.com/pwfisher">pwfisher</a>'s <a href="https://github.com/pwfisher/scroll-intent.js">scroll-intent</a>. ~TY!
+      </p>
+    </section>
+    <footer class="footer">
+      <p class="footer__description"></p>
+      <date id="date" class="date"></date>
+    </footer>
+  </main>
+  <div id="scrolldir-bottom" class="scrolldir scrolldir--bottom">
+    <p class="scrolldir__description">Scrolling Down 🙂</p>
+  </div>
+  <button id="go-to-top" class="button" href="#h1">🔝</button>
+  <script src="https://raw.githubusercontent.com/dollarshaveclub/scrolldir/master/dist/scrolldir.min.js"></script>
+  <script>
+    scrolldir();
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');ga('send', 'pageview');</script>
+</body>
+</html>

@@ -1,30 +1,38 @@
+'use strict';
+
 const gulp = require('gulp');
-const head = require('gulp-header');
-const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
-const qunit = require('node-qunit-phantomjs');
+const sass = require('gulp-sass');
+const inline = require('gulp-inline-source');
+const htmlmin = require('gulp-htmlmin');
+const server = require('gulp-server-livereload');
+const imagemin = require('gulp-imagemin');
 
-const pkg = require('./package.json');
-
-const banner = [
-  '/**',
-  ' * <%= pkg.name %> - <%= pkg.description %>',
-  ' * @version v<%= pkg.version %>',
-  ' * @link <%= pkg.homepage %>',
-  ' * @author <%= pkg.author %>',
-  ' * @license <%= pkg.license %>',
-  '**/',
-  '',
-].join('\n');
-
-gulp.task('test', () => qunit('tests/index.html'));
-
-gulp.task('minify', () => {
-  gulp.src('dist/scrolldir.js')
-  .pipe(uglify())
-  .pipe(head(banner, { pkg }))
-  .pipe(rename({ suffix: '.min' }))
-  .pipe(gulp.dest('dist/'));
+gulp.task('imagemin', () => {
+  gulp.src('./assets/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest(''))
 });
 
-gulp.task('default', ['test', 'minify']);
+gulp.task('styles', () => {
+  return gulp.src('./styles/**/*.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./page/'));
+});
+
+gulp.task('inline', () => {
+  return gulp.src('./page/index.html')
+    .pipe(inline())
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(''));
+});
+
+gulp.task('serve', () => {
+  gulp.src('')
+    .pipe(server({
+      defaultFile: './page/index.html',
+      livereload: true,
+      open: true
+    }));
+});
+
+gulp.task('default', ['imagemin', 'styles', 'inline', 'serve']);
