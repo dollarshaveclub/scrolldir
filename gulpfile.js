@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
 const inline = require('gulp-inline-source');
 const htmlmin = require('gulp-htmlmin');
 const server = require('gulp-server-livereload');
@@ -17,6 +18,12 @@ gulp.task('styles', () => {
   return gulp.src('./styles/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./page/'));
+});
+
+gulp.task('minify', () => {
+  gulp.src('./scripts/app.js')
+  .pipe(uglify())
+  .pipe(gulp.dest('./page/'));
 });
 
 gulp.task('inline', () => {
@@ -35,4 +42,4 @@ gulp.task('serve', () => {
     }));
 });
 
-gulp.task('default', ['imagemin', 'styles', 'inline', 'serve']);
+gulp.task('default', ['imagemin', 'styles', 'inline', 'minify']);
