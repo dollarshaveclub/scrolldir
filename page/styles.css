@@ -1,1 +1,36 @@
-a{color:red}
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: sans-serif; }
+
+header {
+  background-color: #5c6aa5;
+  padding: 2rem 0; }
+  @media (min-width: 44.75rem) {
+    header {
+      padding: 4rem 0; } }
+
+figure {
+  margin: 0 auto;
+  max-width: calc(100% - 2rem); }
+  @media (min-width: 44.75rem) {
+    figure {
+      max-width: 44.75rem; } }
+
+img {
+  display: block;
+  max-width: 7.25rem; }
+  @media (min-width: 44.75rem) {
+    img {
+      max-width: 16.625rem; } }
+
+a {
+  color: #353f7a; }
+
+.share {
+  border-top: 1px solid #dddfed; }
+  .share__link {
+    display: inline-block; }
