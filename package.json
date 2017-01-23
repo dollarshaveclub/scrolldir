@@ -1,6 +1,6 @@
 {
   "name": "scrolldir",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Prefectly track user scroll direction without the jitter",
   "main": "dist/scrolldir.min.js",
   "scripts": {
