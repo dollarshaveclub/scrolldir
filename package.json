@@ -1,6 +1,6 @@
 {
   "name": "scrolldir",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Prefectly track user scroll direction without the jitter",
   "main": "dist/scrolldir.min.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "url": "https://github.com/dollarshaveclub/scrolldir.git/issues"
   },
   "homepage": "https://github.com/dollarshaveclub/scrolldir.git",
-  "dependencies": {
+  "devDependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
     "bower": "^1.7.9",
     "eslint": "^3.9.1",
