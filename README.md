@@ -1,7 +1,7 @@
 <figure align="center">
   <img alt="scrolldir banner" src="https://cloud.githubusercontent.com/assets/1074042/22093384/09f3c2a6-ddba-11e6-8706-7e63be185448.jpg" />
 </figure>
-<p align="center">Prefectly describes vertical scroll direction without the jitter</p>
+<p align="center">Perfectly describes vertical scroll direction without the jitter</p>
 
 <hr>
 
@@ -24,12 +24,12 @@
 
 <h1 align="center">ScrollDir 🔺||🔻</h1>
 
-_ScrollDir_ is a micro Javascript library that perfectly describes vertical scroll direction in a html data attribute. From there, do what want.&nbsp;💪
+_ScrollDir_ is a micro Javascript library that perfectly describes vertical scroll direction in an HTML data attribute. From there, do what want.&nbsp;💪
 
 ### ScrollDir is perfect for:
--  showing or hiding sticky elements based on scroll direction.
+-  showing or hiding sticky elements based on scroll direction
 -  tracking events on scroll direction
--  **ignoring small scroll movements** that cause unwanted element jitters. 
+-  **ignoring small scroll movements** that cause unwanted element jitters 
   -  Scrolldir will only change direction when the user scrolls a significant vertical amount.
 
 ## Installing from a package manager 🌴
@@ -56,7 +56,7 @@ Add **dist/scrolldir.min.js**.
 ```javascript
 scrollDir();
 ```
-By default ScrollDir will set the `data-scrolldir` attribute on the `<html>` element to `up` or `down`:
+By default, ScrollDir will set the `data-scrolldir` attribute on the `<html>` element to `up` or `down`:
 
 ```html
 <html data-scrolldir="up">
