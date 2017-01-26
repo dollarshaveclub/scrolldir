@@ -20,7 +20,7 @@ header {
 }
 figure {
   margin: 0 auto;
-  max-width: 15rem;
+  max-width: 10rem;
   @media (min-width: #{$width-medium}) {
     max-width: 20rem;
   }
