@@ -50,6 +50,9 @@
       <nav class="header__nav">
         <ul class="header__items">
           <li class="header__item">
+            <a href="#installation">Install</a>
+          </li>
+          <li class="header__item">
             <a href="#setup">Setup</a>
           </li>
           <li class="header__item">
@@ -95,92 +98,56 @@
       </ul>
     </section>
     <section id="installation" class="section--installation">
-      <h2>Installing ScrollDir via a Package Manager</h2>
-      <p>yarn</p>
+      <h2>Install</h2>
+      <h3>yarn</h3>
       <div>
         <pre>
-          <code>yarn add scrollDir</code>
+          <code>yarn add scrollDir --dev</code>
         </pre>
       </div>
-      <p>npm</p>
+      <h3>npm</h3>
       <div>
         <pre>
-          <code>npm install scrollDir --save</code>
+          <code>npm install scrollDir --save-dev</code>
         </pre>
       </div>
-      <p>bower</p>
+      <h3>bower</h3>
       <div>
         <pre>
           <code>bower install scrollDir --save</code>
         </pre>
       </div>
+    <section id="setup" class="section--setup">
        <h2>Setup</h2>
-      <p>Add <strong>dist/scrolldir.min.js</strong>.</p>
+      <h3>Add <strong>dist/scrolldir.min.js</strong>.</h3>
     </section>
     <section id="usage" class="section--usage">
-      <div>
-        <pre>
-          <code>
-            scrollDir();
-          </code>
-        </pre>
-      </div>
+      <h2>Usage</h2>
+      <h3>Basic Setup</h3>
+      <div><pre><code>scrollDir();</code></pre></div>
       <p>By default ScrollDir will set the <code>data-scrolldir</code> attribute on the <code>&lt;html&gt;</code> element to <code>up</code> or <code>down</code>:</p>
-      <div>
-        <pre>
-          <code>
-            &lt;html data-scrolldir="up"&gt;
-          </code>
-        </pre>
-      </div>
+      <div><pre><code>&lt;html data-scrolldir="up"&gt;</code></pre></div>
       <p>or</p>
-      <div>
-        <pre>
-          <code>
-            &lt;html data-scrolldir="down"&gt;
-          </code>
-        </pre>
-      </div>
+      <div><pre><code>&lt;html data-scrolldir="down"&gt;</code></pre></div>
       <p>You can then change your styling based on vertical scroll direction.
       </p>
-      <div>
-        <pre>
-          <code>
-            [data-scrolldir="down"] .my-fixed-header { display: none; }
-          </code>
-        </pre>
-      </div>
+      <div><pre><code>[data-scrolldir="down"] .my-fixed-header { display: none; }</code></pre></div>
     </section>
     <section id="options" class="section--options">
-      <p>To use an attribute besides <code>data-scrolldir</code>:</p>
-      <div>
-        <pre>
-          <code>
-            scrollDir({attribute: 'new-attribute-name'});
-          </code>
-        </pre>
+      <h2>Options</h2>
+      <h3>To use an attribute besides <code>data-scrolldir</code>:</h3>
+      <div><pre><code>scrollDir({attribute: 'new-attribute-name'});</code></pre></div>
+      <h3>To add the Scrolldir attribute to a different element:</h3>
+      <div><pre><code>scrollDir({el: 'your-new-selector'});</code></pre>
       </div>
-      <p>To add the Scrolldir attribute to a different element:</p>
-      <div>
-        <pre>
-          <code>
-            scrollDir({el: 'your-new-selector'});
-          </code>
-        </pre>
-      </div>
-      <p>
+      <h3>
         To turn Scrolldir off:
-      </p>
-      <div>
-        <pre>
-          <code>
-            scrollDir({off: true});
-          </code>
-        </pre>
-      </div>
+      </h3>
+      <div><pre><code>scrollDir({off: true});</code></pre></div>
     </section>
     <section id="notes" class="section--notes">
-      <h2>Examples 🌴</h2>
+      <h2>Notes 🌴</h2>
+      <h3>Examples</h3>
       <ul>
         <li>
           <a href="http://codepen.io/yowainwright/pen/9d5a6c6dcf2c17e351dcccfe98158e8b"></a>scrolldir</a> on codepen.
