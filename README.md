@@ -22,7 +22,7 @@
 
 <hr>
 
-<h1 align="center">ScrollDir 🔺||🔻</h1>
+<h1 align="center">ScrollDir ⬆⬇</h1>
 
 _ScrollDir_ is a micro Javascript library that perfectly describes vertical scroll direction in an HTML data attribute. From there, do what want.&nbsp;💪
 
