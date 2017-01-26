@@ -1,8 +1,10 @@
 {
- "name": "App",
+ "name": "ScrollDir",
+ "theme_color": "#000000",
+ "background_color": "#FFFFFF",
  "icons": [
   {
-   "src": "\/android-icon-36x36.png",
+   "src": "android-icon-36x36.png",
    "sizes": "36x36",
    "type": "image\/png",
    "density": "0.75"
