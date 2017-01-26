@@ -1,0 +1,79 @@
+.scrolldir {
+  background-color: $purple-medium;
+  color: white;
+  height: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 3rem;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  text-shadow: 0 1px 1px $purple-dark;
+  text-transform: uppercase;
+  @media (min-width: #{$width-medium}) {
+    height: 4rem;
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+  &--top {
+    border-bottom: 1px solid $purple-dark;
+    top: -3rem;
+    transition: top .5s ease;
+    @media (min-width: #{$width-medium}) {
+      top: -4rem;
+    }
+    [data-scrolldir=up] & {
+      top: 0;
+    }
+  }
+  &--bottom {
+    border-top: 1px solid $purple-dark;
+    bottom: -3rem;
+    transition: buttom .5s ease;
+    @media (min-width: #{$width-medium}) {
+      bottom: -4rem;
+    }
+    [data-scrolldir=down] & {
+      bottom: 0;
+    }
+  }
+}
+
+.main {
+
+}
+.header {
+  color: $purple-dark;
+  margin: 0 auto;
+  max-width: calc(100% - 2rem);
+  &__description {
+    font-size: 1.5rem;
+    text-align: center;
+    @media (min-width: #{$width-medium}) {
+    font-size: 2rem;
+    }
+  }
+  &__nav {
+
+  }
+  &__items {
+
+  }
+  &__item {
+
+  }
+}
+.share {
+  border-top: 1px solid $purple-light;
+  &__link {
+    display: inline-block;
+  }
+}
+.section {
+
+}
+.footer {
+  &__description {
+
+  }
+}

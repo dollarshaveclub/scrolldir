@@ -1,0 +1,71 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+
+}
+body {
+  font-family: sans-serif;
+}
+header {
+  background-color: $purple-light;
+  padding: 4rem 0;
+  @media (min-width: #{$width-medium}) {
+    padding: 6rem 0;
+  }
+}
+figure {
+  margin: 0 auto;
+  max-width: 15rem;
+  @media (min-width: #{$width-medium}) {
+    max-width: 20rem;
+  }
+}
+figcaption {
+
+}
+img {
+  display: block;
+  max-width: (100 / 16) + $spacing-unit;
+  @media (min-width: #{$width-medium}) {
+    max-width: (250 / 16) + $spacing-unit;
+  }
+}
+h1,
+h2,
+h3 {
+
+}
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 0 1px 1px white;
+  @media (min-width: #{$width-medium}) {
+    font-size: 4rem;
+  }
+}
+h2 {
+
+}
+h3 {
+
+}
+p {
+
+}
+code {
+
+}
+pre {
+  code {
+
+  }
+}
+a {
+  color: $purple;
+}
+footer {
+
+}

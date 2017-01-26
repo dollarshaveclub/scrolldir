@@ -2,6 +2,12 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
+const purifyCSS = require('gulp-purifycss');
+const cssnano = require('gulp-cssnano');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('gulp-autoprefixer');
+const mqpacker = require("css-mqpacker");
 const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 const server = require('gulp-server-livereload');
@@ -15,8 +21,22 @@ gulp.task('imagemin', () => {
 });
 
 gulp.task('styles', () => {
-  return gulp.src('./styles/**/*.scss')
+  const processors = [
+    mqpacker({
+      sort: true
+    })
+  ];
+  gulp.src('./styles/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./page/'))
+    .pipe(autoprefixer({browsers: ['last 3 versions']}))
+    .pipe(postcss(processors))
+    .pipe(purifyCSS([
+      'index.html',
+      'app.js',
+      'scrolldir.js'
+    ]))
+    .pipe(cssnano())
     .pipe(gulp.dest('./page/'));
 });
 
@@ -27,16 +47,17 @@ gulp.task('minify', () => {
 });
 
 gulp.task('inline', () => {
-  gulp.src('./page/index.html')
+  gulp.src('./page/*.html')
     .pipe(inline())
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(''));
 });
 
+
 gulp.task('serve', () => {
   gulp.src('')
     .pipe(server({
-      defaultFile: './page/index.html',
+      defaultFile: 'index.html',
       livereload: true,
       open: true
     }));
