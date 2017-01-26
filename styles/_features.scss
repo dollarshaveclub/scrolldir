@@ -83,8 +83,12 @@
     margin-bottom: 0;
     a {
       color: white !important;
+      font-size: .8rem;
       text-decoration: none;
       text-transform: uppercase;
+      @media (min-width: #{$width-medium}) {
+         font-size: 1.25rem;
+      }
     }
   }
 }
