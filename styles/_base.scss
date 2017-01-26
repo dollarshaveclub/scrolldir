@@ -35,10 +35,15 @@ img {
     max-width: (250 / 16) + $spacing-unit;
   }
 }
-h1,
-h2,
-h3 {
-
+hr {
+  border: 0;
+  border-top: 3px solid #ccc;
+  margin-bottom: 1rem;
+  max-width: calc(100% - 2rem);
+  @media (min-width: #{$width-large}) {
+    margin-bottom: 2rem;
+    max-width: $width-medium;
+  }
 }
 h2,
 h3,
@@ -72,12 +77,6 @@ h2 {
   font-size: 2rem;
   padding-bottom: .5rem;
   margin-bottom: 1.5rem;
-}
-h3 {
-
-}
-p {
-
 }
 li {
   margin-bottom: 1rem;

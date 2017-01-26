@@ -36,7 +36,7 @@
 </head>
 <body>
   <div id="scrolldir-top" class="scrolldir scrolldir--top">
-    Scrolling Up 🙃
+    ScrollDir ⬆
   </div>
   <main id="main" class="main">
     <header id="header" class="header">
@@ -87,18 +87,19 @@
         <a class="share__link share__link--reddit" href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="//www.redditstatic.com/spreddit7.gif" alt="submit to reddit" border="0" />
         </a>
       </div>
-      <h2>Why ScrollDir?</h2>
+      <hr />
+      <h2>Why ScrollDir? 🤔</h2>
       <h3>ScrollDir is perfect for:</h3>
       <ul>
-        <li>showing or hiding sticky elements based on scroll direction.
-        <li>tracking events on scroll direction</li>
-        <li><strong>ignoring small scroll movements</strong> that cause unwanted element jitters.
-          <li>Scrolldir will only change direction when the user scrolls a significant vertical amount.</li>
-        </li>
+        <li>Showing or hiding sticky elements based on scroll direction 🐥</li>
+        <li>Tracking events on scroll direction 🔬</li>
+        <li>Only changing its direction attribute when scrolled a significant amount 🔥</li>
+        <li><strong>Ignoring small scroll movements</strong> that cause unwanted element jitters 😎</li>
       </ul>
+      <hr />
     </section>
     <section id="installation" class="section--installation">
-      <h2>Install</h2>
+      <h2>Install 📦</h2>
       <h3>yarn</h3>
       <div>
         <pre>
@@ -118,23 +119,22 @@
         </pre>
       </div>
     <section id="setup" class="section--setup">
-       <h2>Setup</h2>
+       <h2>Setup 📤</h2>
       <h3>Add <strong>dist/scrolldir.min.js</strong>.</h3>
     </section>
     <section id="usage" class="section--usage">
-      <h2>Usage</h2>
+      <h2>Usage 🛠</h2>
       <h3>Basic Setup</h3>
       <div><pre><code>scrollDir();</code></pre></div>
-      <p>By default ScrollDir will set the <code>data-scrolldir</code> attribute on the <code>&lt;html&gt;</code> element to <code>up</code> or <code>down</code>:</p>
+      <p>By default ScrollDir will set a <code>data-scrolldir</code> attribute on the <code>&lt;html&gt;</code> element:</p>
       <div><pre><code>&lt;html data-scrolldir="up"&gt;</code></pre></div>
       <p>or</p>
       <div><pre><code>&lt;html data-scrolldir="down"&gt;</code></pre></div>
-      <p>You can then change your styling based on vertical scroll direction.
-      </p>
+      <p>Now it's easy to change styling for vertical scroll direction!</p>
       <div><pre><code>[data-scrolldir="down"] .my-fixed-header { display: none; }</code></pre></div>
     </section>
     <section id="options" class="section--options">
-      <h2>Options</h2>
+      <h2>Options ⚗</h2>
       <h3>To use an attribute besides <code>data-scrolldir</code>:</h3>
       <div><pre><code>scrollDir({attribute: 'new-attribute-name'});</code></pre></div>
       <h3>To add the Scrolldir attribute to a different element:</h3>
@@ -163,7 +163,7 @@
     </footer>
   </main>
   <div id="scrolldir-bottom" class="scrolldir scrolldir--bottom">
-    Scrolling Down 🙂
+    ScrollDir ⬇
   </div>
   <button id="go-to-top" class="button" href="#h1">🔝</button>
   <script
