@@ -1,1 +1,1 @@
-$(document).ready(function(){scrollDir()});
+scrollDir();
