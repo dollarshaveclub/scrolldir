@@ -1,7 +1,7 @@
 <figure align="center">
   <img alt="scrolldir banner" src="https://cloud.githubusercontent.com/assets/1074042/22093384/09f3c2a6-ddba-11e6-8706-7e63be185448.jpg" />
 </figure>
-<p align="center">Perfectly describes vertical scroll direction without the jitter</p>
+<p align="center">Vertical scroll direction without jitter</p>
 
 <hr>
 
