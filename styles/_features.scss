@@ -29,7 +29,7 @@
   &--bottom {
     border-top: 1px solid $purple-dark;
     bottom: -3rem;
-    transition: buttom .5s ease;
+    transition: bottom .5s ease;
     @media (min-width: #{$width-medium}) {
       bottom: -4rem;
     }
@@ -105,13 +105,5 @@
   &__link {
     display: inline-block;
     padding: 0 .5rem;
-  }
-}
-.section {
-
-}
-.footer {
-  &__description {
-
   }
 }
