@@ -32,12 +32,17 @@ ScrollDir, short for Scroll Direction, is a 0 dependency micro Javascript librar
 -  only changing its direction attribute when scrolled a significant amount 🔥
 -  **ignoring small scroll movements** that cause unwanted jitters 😎
 
+<hr>
+
+## Inline Demo 🎥
+
 <p align="center">
   <a href="https://dollarshaveclub.github.io/scrolldir/">
-    <img src="https://cloud.githubusercontent.com/assets/1074042/22451631/0686aa38-e725-11e6-8f01-03a127828c90.gif" alt="Scrolldir gif"  />
+    <img src="https://cloud.githubusercontent.com/assets/1074042/22451992/ebe879b0-e727-11e6-8799-511209695e26.gif" alt="Scrolldir gif"  width="100%" />
   </a>
 </p>
 
+<hr>
 
 ## Install 📦
 
