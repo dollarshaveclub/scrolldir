@@ -32,6 +32,13 @@ _ScrollDir_ is a micro Javascript library that perfectly describes vertical scro
 -  only changing its direction attribute when scrolled a significant amount 🔥
 -  **ignoring small scroll movements** that cause unwanted jitters 😎
 
+<p align="center">
+  <a href="https://dollarshaveclub.github.io/scrolldir/">
+    <img src="https://cloud.githubusercontent.com/assets/1074042/22451631/0686aa38-e725-11e6-8f01-03a127828c90.gif" alt="Scrolldir gif" width="100%" />
+  </a>
+</p>
+
+
 ## Install 📦
 
 npm
