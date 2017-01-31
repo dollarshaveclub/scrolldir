@@ -24,7 +24,7 @@
 
 <h1 align="center">ScrollDir ⬆⬇</h1>
 
-_ScrollDir_ is a micro Javascript library that perfectly describes vertical scroll direction in an HTML data attribute. From there, do what want.&nbsp;💪
+ScrollDir, short for Scroll Direction, is a 0 dependency micro Javascript library for describing vertical scroll direction in an HTML data attribute. 💪
 
 ### ScrollDir is perfect for:
 -  showing or hiding sticky elements based on scroll direction 🐥
@@ -34,7 +34,7 @@ _ScrollDir_ is a micro Javascript library that perfectly describes vertical scro
 
 <p align="center">
   <a href="https://dollarshaveclub.github.io/scrolldir/">
-    <img src="https://cloud.githubusercontent.com/assets/1074042/22451631/0686aa38-e725-11e6-8f01-03a127828c90.gif" alt="Scrolldir gif" width="100%" />
+    <img src="https://cloud.githubusercontent.com/assets/1074042/22451631/0686aa38-e725-11e6-8f01-03a127828c90.gif" alt="Scrolldir gif"  />
   </a>
 </p>
 
