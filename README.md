@@ -34,7 +34,7 @@ ScrollDir, short for Scroll Direction, is a 0 dependency micro Javascript librar
 
 <hr>
 
-## Inline Demo 🎥
+## Demo 🎥
 
 <p align="center">
   <a href="https://dollarshaveclub.github.io/scrolldir/">
