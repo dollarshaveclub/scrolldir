@@ -1,7 +1,7 @@
 <figure align="center">
   <img alt="scrolldir banner" src="https://cloud.githubusercontent.com/assets/1074042/22093384/09f3c2a6-ddba-11e6-8706-7e63be185448.jpg" />
 </figure>
-<p align="center">Vertical scroll direction without jitter</p>
+<p align="center">Leverage Vertical Scroll Direction with CSS</p>
 
 <hr>
 
@@ -24,7 +24,7 @@
 
 <h1 align="center">ScrollDir ⬆⬇</h1>
 
-ScrollDir, short for Scroll Direction, is a 0 dependency micro Javascript library for describing vertical scroll direction in an HTML data attribute. 💪
+ScrollDir, short for Scroll Direction, is a 0 dependency micro Javascript plugin to easily leverage vertical scroll direction in CSS via a data attribute. 💪
 
 ### ScrollDir is perfect for:
 -  showing or hiding sticky elements based on scroll direction 🐥
