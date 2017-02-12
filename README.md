@@ -65,7 +65,10 @@ Add **dist/scrolldir.min.js**.
 
 ## Usage 🛠
 
-
+```javascript
+scrollDir();
+```
+or
 ```javascript
 scrollDir();
 ```
@@ -91,6 +94,10 @@ To use an attribute besides `data-scrolldir`:
 ```javascript
 scrollDir({attribute: 'new-attribute-name'});
 ```
+or
+```javascript
+
+```
 
 To add the Scrolldir attribute to a different element:
 ```javascript
@@ -106,4 +113,4 @@ scrollDir({off: true});
 
 - [scrolldir](http://codepen.io/yowainwright/pen/9d5a6c6dcf2c17e351dcccfe98158e8b) on codepen.
 
-This is a modular version of [pwfisher](https://github.com/pwfisher)'s [scroll-intent](https://github.com/pwfisher/scroll-intent.js). ~TY!
+This is a modular version of [pwfisher](https://github.com/pwfisher)'s [scroll-intent](https://github.com/pwfisher/scroll-intent.js). If you'd like to easily use scrolldir with jQuery—use Scroll Intent. ~TY!
