@@ -71,12 +71,3 @@ export default function scrollDir(opts) {
   el.setAttribute(attribute, dir);
   return win.addEventListener('scroll', handler);
 }
-
-const plugin = window.$ || window.jQuery || window.Zepto;
-if (plugin) {
-  plugin.fn.extend({
-    scrollDir: function scrollDirFunc(o) {
-      return scrollDir(o);
-    },
-  });
-}
