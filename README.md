@@ -67,7 +67,7 @@ Add **dist/scrolldir.auto.min.js** and your done. There is no more configuration
 ### Default
 Add **dist/scrolldir.min.js**. You have access to the API options below and must invoke scrollDir. See the [Default Setup Usage](#default) and [Options](#options) below.
 
-<h2 id="default">Defaut Setup Usage 🛠</h2>
+<h2 id="default">Default Setup Usage 🛠</h2>
 
 ```javascript
 scrollDir();
