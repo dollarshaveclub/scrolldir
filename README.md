@@ -72,10 +72,6 @@ Add **dist/scrolldir.min.js**. You have access to the API options below and must
 ```javascript
 scrollDir();
 ```
-or
-```javascript
-scrollDir();
-```
 By default, ScrollDir will set the `data-scrolldir` attribute on the `<html>` element to `up` or `down`:
 
 ```html
