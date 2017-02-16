@@ -61,13 +61,13 @@ yarn add scrolldir
 
 ## Setup 📤
 
-### Default
-Add **dist/scrolldir.min.js**.
-
 ### Auto
 Add **dist/scrolldir.auto.min.js** and your done. There is no more configuration to do! Scrolldir will **just** conveniently work. 
 
-## Usage 🛠
+### Default
+Add **dist/scrolldir.min.js**. You have access to the API options below and must invoke scrollDir. See the [Default Setup Usage](#default) and [Options](#options) below.
+
+<h2 id="default">Defaut Setup Usage 🛠</h2>
 
 ```javascript
 scrollDir();
@@ -92,7 +92,7 @@ Now it's easy to change styling for vertical scroll direction!
 [data-scrolldir="down"] .my-fixed-header { display: none; }
 ```
 
-## Options ⚗
+<h2 id="options">Options ⚗</h2>
 
 To use an attribute besides `data-scrolldir`:
 ```javascript
