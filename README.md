@@ -60,8 +60,11 @@ yarn add scrolldir
 ```
 
 ## Setup 📤
-
+Default:
 Add **dist/scrolldir.min.js**.
+
+Auto:
+Add **dist/scrolldir.auto.min.js** and your done! Scrolldir will **just** conveniently work. 
 
 ## Usage 🛠
 

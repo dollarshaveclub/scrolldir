@@ -17,14 +17,22 @@ const banner = [
   '',
 ].join('\n');
 
-gulp.task('test', () => qunit('tests/index.html'));
+gulp.task('test', () => {
+  qunit('tests/auto/index.html');
+  qunit('tests/standard/index.html');
+});
 
 gulp.task('minify', () => {
   gulp.src('dist/scrolldir.js')
-  .pipe(uglify())
-  .pipe(head(banner, { pkg }))
-  .pipe(rename({ suffix: '.min' }))
-  .pipe(gulp.dest('dist/'));
+    .pipe(uglify())
+    .pipe(head(banner, { pkg }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('dist/'));
+  gulp.src('dist/scrolldir.auto.js')
+    .pipe(uglify())
+    .pipe(head(banner, { pkg }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('default', ['test', 'minify']);
