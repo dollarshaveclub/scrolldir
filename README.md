@@ -9,6 +9,9 @@
   <a href="https://travis-ci.org/dollarshaveclub/scrolldir/">
     <img alt="Build Status" src="https://travis-ci.org/dollarshaveclub/scrolldir.svg?branch=master" />
   </a>
+  <a href="https://cdnjs.com/libraries/scrolldir">
+    <img alt="CDNJS" src="https://img.shields.io/cdnjs/v/scrolldir.svg" />
+  </a>
   <a href="https://www.npmjs.com/package/scrolldir">
     <img alt="npm version" src="https://badge.fury.io/js/scrolldir.svg" />
   </a>
