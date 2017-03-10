@@ -51,11 +51,11 @@ ScrollDir, short for Scroll Direction, is a 0 dependency, ~1kb micro Javascript 
 
 npm
 ```sh
-npm install scrollDir --save
+npm install scrolldir --save
 ```
 bower
 ```sh
-bower install scrollDir --save
+bower install scrolldir --save
 ```
 yarn
 ```sh
