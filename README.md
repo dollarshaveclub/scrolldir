@@ -37,6 +37,24 @@ ScrollDir, short for Scroll Direction, is a 0 dependency, ~1kb micro Javascript 
 
 <hr>
 
+## Usage
+
+ScrollDir will set the `data-scrolldir` attribute on the `<html>` element to `up` or `down`:
+
+```html
+<html data-scrolldir="up">
+```
+or
+```html
+<html data-scrolldir="down">
+```
+
+Now it’s easy to change styles based on the direction the user is scrolling!
+
+```css
+[data-scrolldir="down"] .my-fixed-header { display: none; }
+```
+
 ## In Action🎥
 
 <p align="center">
@@ -64,52 +82,31 @@ yarn add scrolldir
 
 ## Setup 📤
 
-### Auto
-Add **dist/scrolldir.auto.min.js** and your done. There is no more configuration to do! Scrolldir will **just** conveniently work. 
+### Easy Mode
+Add **dist/scrolldir.auto.min.js** and you’re done. There is nothing more to do! Scrolldir will **just work**.
 
-### Default
-Add **dist/scrolldir.min.js**. You have access to the API options below and must invoke scrollDir. See the [Default Setup Usage](#default) and [Options](#options) below.
+Now go write some styles using `[data-scrolldir="down"]` and `[data-scrolldir="up"]`.
 
-<h2 id="default">Default Setup Usage 🛠</h2>
+### Custom Mode 🛠
+Add **dist/scrolldir.min.js**. You have access to the API options below and must invoke scrollDir.
 
 ```javascript
 scrollDir();
 ```
-By default, ScrollDir will set the `data-scrolldir` attribute on the `<html>` element to `up` or `down`:
-
-```html
-<html data-scrolldir="up">
-```
-or
-```html
-<html data-scrolldir="down">
-```
-
-Now it's easy to change styling for vertical scroll direction!
-
-```css
-[data-scrolldir="down"] .my-fixed-header { display: none; }
-```
-
-<h2 id="options">Options ⚗</h2>
 
 To use an attribute besides `data-scrolldir`:
 ```javascript
-scrollDir({attribute: 'new-attribute-name'});
-```
-or
-```javascript
-
+scrollDir({ attribute: 'new-attribute-name' });
 ```
 
 To add the Scrolldir attribute to a different element:
 ```javascript
-scrollDir({el: 'your-new-selector'});
+scrollDir({ el: 'your-new-selector' });
 ```
 
 To turn Scrolldir off:
 ```javascript
-scrollDir({off: true});
+scrollDir({ off: true });
 ```
 
 ## Examples 🌴
