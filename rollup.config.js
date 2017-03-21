@@ -7,7 +7,7 @@ import eslint from 'rollup-plugin-eslint';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
-const name = process.env.entry ? process.env.entry : '.auto';
+const name = process.env.entry ? '.auto' : '';
 
 export default {
   entry: `src/scrolldir${name}.js`,
