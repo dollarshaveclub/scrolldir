@@ -1,7 +1,7 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global.scrollDir = factory());
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.scrollDir = factory());
 }(this, (function () { 'use strict';
 
 function scrollDir(opts) {
@@ -13,19 +13,15 @@ function scrollDir(opts) {
   var el = opts && opts.el || defaults.el;
   var win = opts && opts.win || defaults.win;
   var attribute = opts && opts.attribute || defaults.attribute;
-  if (opts && opts.off === true) {
-    return el.setAttribute(attribute, 'off');
-  }
   var body = document.body;
   var historyLength = 32; // Ticks to keep in history.
   var historyMaxAge = 512; // History data time-to-live (ms).
   var thresholdPixels = 64; // Ignore moves smaller than this.
   var history = Array(historyLength);
-  var dir = 'down'; // 'up' or 'down'
+  var dir = opts && opts.off ? 'off' : 'down';
   var e = void 0; // last scroll event
   var pivot = void 0; // "high-water mark"
   var pivotTime = 0;
-
   var tick = function tickFunc() {
     var y = win.scrollY;
     var t = e.timeStamp;
@@ -70,7 +66,8 @@ function scrollDir(opts) {
 
   var handler = function handlerFunc(event) {
     e = event;
-    win.requestAnimationFrame(tick);
+    if (el.getAttribute(attribute) === 'off') return false;
+    return win.requestAnimationFrame(tick);
   };
 
   pivot = win.scrollY;

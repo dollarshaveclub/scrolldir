@@ -7,19 +7,15 @@ export default function scrollDir(opts) {
   const el = (opts && opts.el) || defaults.el;
   const win = (opts && opts.win) || defaults.win;
   const attribute = (opts && opts.attribute) || defaults.attribute;
-  if (opts && opts.off === true) {
-    return el.setAttribute(attribute, 'off');
-  }
   const body = document.body;
   const historyLength = 32; // Ticks to keep in history.
   const historyMaxAge = 512; // History data time-to-live (ms).
   const thresholdPixels = 64; // Ignore moves smaller than this.
   const history = Array(historyLength);
-  let dir = 'down'; // 'up' or 'down'
+  let dir = opts && opts.off ? 'off' : 'down';
   let e; // last scroll event
   let pivot; // "high-water mark"
   let pivotTime = 0;
-
   const tick = function tickFunc() {
     let y = win.scrollY;
     const t = e.timeStamp;
@@ -64,7 +60,8 @@ export default function scrollDir(opts) {
 
   const handler = function handlerFunc(event) {
     e = event;
-    win.requestAnimationFrame(tick);
+    if (el.getAttribute(attribute) === 'off') return false;
+    return win.requestAnimationFrame(tick);
   };
 
   pivot = win.scrollY;
