@@ -18,7 +18,7 @@ function scrollDir(opts) {
   var historyMaxAge = 512; // History data time-to-live (ms).
   var thresholdPixels = 64; // Ignore moves smaller than this.
   var history = Array(historyLength);
-  var dir = opts && opts.off ? 'off' : 'down';
+  var dir = 'down'; // 'up' or 'down'
   var e = void 0; // last scroll event
   var pivot = void 0; // "high-water mark"
   var pivotTime = 0;
@@ -66,10 +66,20 @@ function scrollDir(opts) {
 
   var handler = function handlerFunc(event) {
     e = event;
-    if (el.getAttribute(attribute) === 'off') return false;
     return win.requestAnimationFrame(tick);
   };
 
+  // If opts.off, turn it off
+  // - set html[data-scrolldir="off"]
+  // - remove the event listener
+  if (opts && opts.off === true) {
+    win.removeEventListener('scroll', handler);
+    return el.setAttribute(attribute, 'off');
+  }
+
+  // else, turn it on
+  // - set html[data-scrolldir="down"]
+  // - add the event listener
   pivot = win.scrollY;
   el.setAttribute(attribute, dir);
   return win.addEventListener('scroll', handler);

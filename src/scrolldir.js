@@ -12,7 +12,7 @@ export default function scrollDir(opts) {
   const historyMaxAge = 512; // History data time-to-live (ms).
   const thresholdPixels = 64; // Ignore moves smaller than this.
   const history = Array(historyLength);
-  let dir = opts && opts.off ? 'off' : 'down';
+  let dir = 'down'; // 'up' or 'down'
   let e; // last scroll event
   let pivot; // "high-water mark"
   let pivotTime = 0;
@@ -60,10 +60,20 @@ export default function scrollDir(opts) {
 
   const handler = function handlerFunc(event) {
     e = event;
-    if (el.getAttribute(attribute) === 'off') return false;
     return win.requestAnimationFrame(tick);
   };
 
+  // If opts.off, turn it off
+  // - set html[data-scrolldir="off"]
+  // - remove the event listener
+  if (opts && opts.off === true) {
+    win.removeEventListener('scroll', handler);
+    return el.setAttribute(attribute, 'off');
+  }
+
+  // else, turn it on
+  // - set html[data-scrolldir="down"]
+  // - add the event listener
   pivot = win.scrollY;
   el.setAttribute(attribute, dir);
   return win.addEventListener('scroll', handler);
