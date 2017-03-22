@@ -20,6 +20,7 @@ const banner = [
 gulp.task('test', () => {
   qunit('tests/auto/index.html');
   qunit('tests/standard/index.html');
+  qunit('tests/off/index.html');
 });
 
 gulp.task('minify', () => {
