@@ -31,7 +31,6 @@ ScrollDir, short for Scroll Direction, is a 0 dependency, ~1kb micro Javascript 
 
 ### ScrollDir is perfect for:
 -  showing or hiding sticky elements based on scroll direction 🐥
--  tracking events on scroll direction 🔬
 -  only changing its direction attribute when scrolled a significant amount 🔥
 -  **ignoring small scroll movements** that cause unwanted jitters 😎
 
