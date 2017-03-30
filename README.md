@@ -12,6 +12,9 @@
   <a href="https://cdnjs.com/libraries/scrolldir">
     <img alt="CDNJS" src="https://img.shields.io/cdnjs/v/scrolldir.svg" />
   </a>
+  <a href="https://greenkeeper.io/">
+    <img alt="Greenkeeper" src="https://badges.greenkeeper.io/dollarshaveclub/scrolldir.svg" />
+  </a>
   <a href="https://www.npmjs.com/package/scrolldir">
     <img alt="npm version" src="https://badge.fury.io/js/scrolldir.svg" />
   </a>
@@ -30,6 +33,7 @@
 ScrollDir, short for Scroll Direction, is a 0 dependency, ~1kb micro Javascript plugin to easily leverage vertical scroll direction in CSS via a data attribute. 💪
 
 ### ScrollDir is perfect for:
+
 -  showing or hiding sticky elements based on scroll direction 🐥
 -  only changing its direction attribute when scrolled a significant amount 🔥
 -  **ignoring small scroll movements** that cause unwanted jitters 😎
