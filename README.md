@@ -58,7 +58,7 @@ Now it’s easy to change styles based on the direction the user is scrolling!
 [data-scrolldir="down"] .my-fixed-header { display: none; }
 ```
 
-## In Action🎥
+## In Action 🎥
 
 <p align="center">
   <a href="https://dollarshaveclub.github.io/scrolldir/">
@@ -112,8 +112,8 @@ To turn Scrolldir off:
 scrollDir({ off: true });
 ```
 
-## Examples 🌴
+## Example 🌴
 
 - [scrolldir](http://codepen.io/yowainwright/pen/9d5a6c6dcf2c17e351dcccfe98158e8b) on codepen.
 
-This is a modular version of [pwfisher](https://github.com/pwfisher)'s [scroll-intent](https://github.com/pwfisher/scroll-intent.js). If you'd like to easily use scrolldir with jQuery—use Scroll Intent. ~TY!
+This is a modular version of [pwfisher](https://github.com/pwfisher)'s [scroll-intent](https://github.com/pwfisher/scroll-intent.js). If you'd like to use scrolldir with jQuery—use Scroll Intent. Scrolldir should work easily within any front-end framework so it ditches library dependencies. ~TY!

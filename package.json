@@ -1,11 +1,11 @@
 {
   "name": "scrolldir",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Vertical scroll direction in CSS",
   "main": "dist/scrolldir.min.js",
   "scripts": {
     "test": "gulp test",
-    "start": "rollup -c && rollup -c --environment entry:.auto && gulp",
+    "build": "rollup -c && rollup -c --environment entry:.auto && gulp",
     "postpublish": "git tag $npm_package_version && git push origin --tags"
   },
   "repository": {
