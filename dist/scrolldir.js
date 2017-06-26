@@ -23,7 +23,7 @@ var pivot = void 0; // "high-water mark"
 var pivotTime = 0;
 
 function tick() {
-  var y = win.scrollY;
+  var y = win.scrollY || win.pageYOffset;
   var t = e.timeStamp;
   var furthest = dir === 'down' ? Math.max : Math.min;
 
@@ -85,7 +85,7 @@ function scrollDir(opts) {
   // else, turn it on
   // - set html[data-scrolldir="down"]
   // - add the event listener
-  pivot = win.scrollY;
+  pivot = win.scrollY || win.pageYOffset;
   el.setAttribute(attribute, dir);
   return win.addEventListener('scroll', handler);
 }
