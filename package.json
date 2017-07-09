@@ -38,7 +38,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
     "node-qunit-phantomjs": "^1.4.0",
-    "rollup": "^0.42.0",
+    "rollup": "^0.43.1",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-eslint": "^4.0.0",
