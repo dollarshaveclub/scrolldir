@@ -13,7 +13,7 @@ var defaults = {
 var el = void 0;
 var win = void 0;
 var attribute = void 0;
-var dir = void 0;
+var dir = void 0; // 'up' or 'down'
 var body = document.body;
 var historyLength = 32; // Ticks to keep in history.
 var historyMaxAge = 512; // History data time-to-live (ms).
@@ -74,8 +74,8 @@ function scrollDir(opts) {
   el = opts && opts.el || defaults.el;
   win = opts && opts.win || defaults.win;
   attribute = opts && opts.attribute || defaults.attribute;
-  dir = opts && opts.dir || defaults.dir;
-  
+  dir = opts && opts.direction || defaults.dir;
+
   // If opts.off, turn it off
   // - set html[data-scrolldir="off"]
   // - remove the event listener

@@ -112,6 +112,11 @@ To turn Scrolldir off:
 scrollDir({ off: true });
 ```
 
+To turn provide a different scroll direction on page load (or app start):
+```javascript
+scrollDir({ direction: 'up' }); // the default is 'down'
+```
+
 ## Example 🌴
 
 - [scrolldir](http://codepen.io/yowainwright/pen/9d5a6c6dcf2c17e351dcccfe98158e8b) on codepen.
