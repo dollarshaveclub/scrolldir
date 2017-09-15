@@ -2,16 +2,17 @@ const defaults = {
   el: document.documentElement,
   win: window,
   attribute: 'data-scrolldir',
+  dir: 'down'
 };
 let el;
 let win;
 let attribute;
+let dir; // 'up' or 'down'
 const body = document.body;
 const historyLength = 32; // Ticks to keep in history.
 const historyMaxAge = 512; // History data time-to-live (ms).
 const thresholdPixels = 64; // Ignore moves smaller than this.
 const history = Array(historyLength);
-let dir = 'down'; // 'up' or 'down'
 let e; // last scroll event
 let pivot; // "high-water mark"
 let pivotTime = 0;
@@ -67,6 +68,7 @@ export default function scrollDir(opts) {
   el = (opts && opts.el) || defaults.el;
   win = (opts && opts.win) || defaults.win;
   attribute = (opts && opts.attribute) || defaults.attribute;
+  dir = (opts && opts.dir) || defaults.dir;
 
   // If opts.off, turn it off
   // - set html[data-scrolldir="off"]
