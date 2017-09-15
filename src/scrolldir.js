@@ -2,7 +2,7 @@ const defaults = {
   el: document.documentElement,
   win: window,
   attribute: 'data-scrolldir',
-  dir: 'down'
+  dir: 'down',
 };
 let el;
 let win;
@@ -68,7 +68,7 @@ export default function scrollDir(opts) {
   el = (opts && opts.el) || defaults.el;
   win = (opts && opts.win) || defaults.win;
   attribute = (opts && opts.attribute) || defaults.attribute;
-  dir = (opts && opts.dir) || defaults.dir;
+  dir = (opts && opts.direction) || defaults.dir;
 
   // If opts.off, turn it off
   // - set html[data-scrolldir="off"]
