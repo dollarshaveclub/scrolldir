@@ -7,9 +7,12 @@
   "globals": {
     "document": true,
     "foo": true,
+    "QUnit": true,
+    "scrollDir": true,
     "window": true
   },
   "rules": {
-    "indent": 2
+    "indent": 2,
+    "semi": [2, "never"]
   }
 }
