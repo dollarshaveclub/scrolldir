@@ -1,11 +1,12 @@
 {
   "name": "scrolldir",
-  "version": "1.2.15",
+  "version": "1.2.17",
   "description": "Vertical scroll direction in CSS",
-  "main": "dist/scrolldir.min.js",
+  "main": "dist/scrolldir.js",
   "scripts": {
     "test": "gulp test",
-    "build": "rollup -c && rollup -c --environment entry:.auto && gulp",
+    "build": "npm run lint && rollup -c && rollup -c --environment entry:.auto && gulp",
+    "lint": "./node_modules/.bin/eslint .src/*.js",
     "postpublish": "git tag $npm_package_version && git push origin --tags"
   },
   "repository": {
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/dollarshaveclub/scrolldir.git",
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "bower": "^1.7.9",
     "eslint": "^4.1.0",
