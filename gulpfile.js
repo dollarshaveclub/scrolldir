@@ -1,10 +1,10 @@
-const gulp = require('gulp')
-const head = require('gulp-header')
-const uglify = require('gulp-uglify')
-const rename = require('gulp-rename')
-const qunit = require('node-qunit-phantomjs')
+const gulp = require('gulp');
+const head = require('gulp-header');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const qunit = require('node-qunit-phantomjs');
 
-const pkg = require('./package.json')
+const pkg = require('./package.json');
 
 const banner = [
   '/**',
@@ -15,25 +15,25 @@ const banner = [
   ' * @license <%= pkg.license %>',
   '**/',
   '',
-].join('\n')
+].join('\n');
 
 gulp.task('test', () => {
-  qunit('tests/auto/index.html')
-  qunit('tests/standard/index.html')
-  qunit('tests/off/index.html')
-})
+  qunit('tests/auto/index.html');
+  qunit('tests/standard/index.html');
+  qunit('tests/off/index.html');
+});
 
 gulp.task('minify', () => {
   gulp.src('dist/scrolldir.js')
     .pipe(uglify())
     .pipe(head(banner, { pkg }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('dist/'));
   gulp.src('dist/scrolldir.auto.js')
     .pipe(uglify())
     .pipe(head(banner, { pkg }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/'))
-})
+    .pipe(gulp.dest('dist/'));
+});
 
-gulp.task('default', ['test', 'minify'])
+gulp.task('default', ['test', 'minify']);

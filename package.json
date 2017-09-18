@@ -1,10 +1,9 @@
 {
   "name": "scrolldir",
-  "version": "1.2.16",
+  "version": "1.2.15",
   "description": "Vertical scroll direction in CSS",
   "main": "dist/scrolldir.min.js",
   "scripts": {
-    "lint": "node_modules/eslint/bin/eslint.js . --fix",
     "test": "gulp test",
     "build": "rollup -c && rollup -c --environment entry:.auto && gulp",
     "postpublish": "git tag $npm_package_version && git push origin --tags"
