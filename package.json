@@ -33,7 +33,7 @@
     "babel-preset-es2015-rollup": "^3.0.0",
     "bower": "^1.7.9",
     "eslint": "^4.1.0",
-    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-airbnb": "^16.0.0",
     "eslint-plugin-import": "^2.3.0",
     "gulp": "^3.9.1",
     "gulp-header": "^1.8.8",
