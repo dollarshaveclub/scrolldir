@@ -1,13 +1,7 @@
-const defaults = {
-  el: document.documentElement,
-  win: window,
-  attribute: 'data-scrolldir',
-  dir: 'down',
-};
-let el;
-let win;
-let attribute;
-let dir; // 'up' or 'down'
+let el = document.documentElement;
+let win = window;
+let attribute = 'data-scrolldir';
+let dir = 'down' // 'up' or 'down'
 const body = document.body;
 const historyLength = 32; // Ticks to keep in history.
 const historyMaxAge = 512; // History data time-to-live (ms).
@@ -65,10 +59,12 @@ function handler(event) {
 }
 
 export default function scrollDir(opts) {
-  el = (opts && opts.el) || defaults.el;
-  win = (opts && opts.win) || defaults.win;
-  attribute = (opts && opts.attribute) || defaults.attribute;
-  dir = (opts && opts.direction) || defaults.dir;
+  if (opts) {
+    el = opts.el || el;
+    win = opts.win || win;
+    attribute = opts.attribute || attribute;
+    dir = opts.direction || dir;
+  }
 
   // If opts.off, turn it off
   // - set html[data-scrolldir="off"]
