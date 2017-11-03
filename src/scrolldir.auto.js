@@ -1,3 +1,3 @@
-import scrollDir from './scrolldir';
+import scrollDir from './scrolldir'
 
-scrollDir();
+scrollDir()

@@ -4,10 +4,10 @@
 	(global.scrollDir = factory());
 }(this, (function () { 'use strict';
 
-var el = document.documentElement;
-var win = window;
 var attribute = 'data-scrolldir';
 var dir = 'down'; // 'up' or 'down'
+var el = document.documentElement;
+var win = window;
 var body = document.body;
 var historyLength = 32; // Ticks to keep in history.
 var historyMaxAge = 512; // History data time-to-live (ms).
@@ -66,18 +66,17 @@ function handler(event) {
 
 function scrollDir(opts) {
   if (opts) {
-    el = opts.el || el;
-    win = opts.win || win;
-    attribute = opts.attribute || attribute;
-    dir = opts.direction || dir;
-  }
-
-  // If opts.off, turn it off
-  // - set html[data-scrolldir="off"]
-  // - remove the event listener
-  if (opts && opts.off === true) {
-    el.setAttribute(attribute, 'off');
-    return win.removeEventListener('scroll', handler);
+    if (opts.attribute) attribute = opts.attribute;
+    if (opts.el) el = opts.el;
+    if (opts.win) win = opts.win;
+    if (opts.dir) dir = opts.dir;
+    // If opts.off, turn it off
+    // - set html[data-scrolldir="off"]
+    // - remove the event listener
+    if (opts.off === true) {
+      el.setAttribute(attribute, 'off');
+      return win.removeEventListener('scroll', handler);
+    }
   }
 
   // else, turn it on

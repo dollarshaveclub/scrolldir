@@ -1,13 +1,13 @@
 {
   "name": "scrolldir",
-  "version": "1.2.18",
+  "version": "1.2.19",
   "description": "Vertical scroll direction in CSS",
   "main": "dist/scrolldir.js",
   "scripts": {
-    "test": "gulp test",
+    "test": "gulp test && npm run test:es-check",
     "test:es-check": "es-check check es5 dist/scrolldir.auto.js dist/scrolldir.js dist/scrolldir.min.js dist/scrolldir.auto.min.js",
-    "build": "npm run lint && rollup -c && rollup -c --environment entry:.auto && gulp",
-    "lint": "./node_modules/.bin/eslint .src/*.js",
+    "build": "npm run lint && rollup -c && rollup -c --environment entry:.auto && gulp minify && npm test",
+    "lint": "eslint src/*.js --fix",
     "postpublish": "git tag $npm_package_version && git push origin --tags"
   },
   "repository": {
@@ -31,12 +31,11 @@
   "homepage": "https://github.com/dollarshaveclub/scrolldir.git",
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
     "babel-preset-es2015-rollup": "^3.0.0",
     "bower": "^1.7.9",
     "es-check": "^1.0.0",
     "eslint": "^4.1.0",
-    "eslint-config-airbnb": "^16.0.0",
-    "eslint-plugin-import": "^2.3.0",
     "gulp": "^3.9.1",
     "gulp-header": "^1.8.8",
     "gulp-rename": "^1.2.2",
@@ -45,8 +44,9 @@
     "rollup": "^0.50.0",
     "rollup-plugin-babel": "^3.0.0",
     "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-eslint": "^4.0.0",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^2.0.0"
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "peerDependencies": {
+    "gulp": "5.x"
   }
 }
