@@ -1,15 +1,22 @@
 {
-  "extends": [ "airbnb/base"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module"
+  },
   "env": {
     "browser": true,
     "node": true
   },
   "globals": {
     "document": true,
-    "foo": true,
     "window": true
   },
   "rules": {
-    "indent": 2
+    "indent": [2, 2],
+    "no-console": [
+      "error", { "allow": ["warn", "error"] }
+    ],
+    "semi": [2, "never"]
   }
 }
