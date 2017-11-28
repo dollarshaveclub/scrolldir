@@ -5,7 +5,7 @@
   "main": "dist/scrolldir.js",
   "scripts": {
     "test": "gulp test && npm run test:es-check",
-    "test:es-check": "es-check check es5 dist/scrolldir.auto.js dist/scrolldir.js dist/scrolldir.min.js dist/scrolldir.auto.min.js",
+    "test:es-check": "es-check es5 dist/scrolldir.auto.js dist/scrolldir.js dist/scrolldir.min.js dist/scrolldir.auto.min.js",
     "build": "npm run lint && rollup -c && rollup -c --environment entry:.auto && gulp minify && npm test",
     "lint": "eslint src/*.js --fix",
     "postpublish": "git tag $npm_package_version && git push origin --tags"
@@ -34,7 +34,7 @@
     "babel-eslint": "^8.0.1",
     "babel-preset-es2015-rollup": "^3.0.0",
     "bower": "^1.7.9",
-    "es-check": "^1.0.0",
+    "es-check": "^2.0.0",
     "eslint": "^4.1.0",
     "gulp": "^3.9.1",
     "gulp-header": "^1.8.8",
