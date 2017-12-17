@@ -40,7 +40,7 @@
     "gulp-header": "^1.8.8",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
-    "node-qunit-phantomjs": "^1.4.0",
+    "node-qunit-phantomjs": "^2.0.0",
     "rollup": "^0.52.0",
     "rollup-plugin-babel": "^3.0.0",
     "rollup-plugin-commonjs": "^8.0.2",
