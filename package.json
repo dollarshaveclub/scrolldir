@@ -37,7 +37,7 @@
     "es-check": "^2.0.0",
     "eslint": "^4.1.0",
     "gulp": "^3.9.1",
-    "gulp-header": "^1.8.8",
+    "gulp-header": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
     "node-qunit-phantomjs": "^2.0.0",
