@@ -18,7 +18,7 @@
   <a href="https://www.npmjs.com/package/scrolldir">
     <img alt="npm version" src="https://badge.fury.io/js/scrolldir.svg" />
   </a>
-  <a href="https://github.com/dollarshaveclub/scrolldir"> 
+  <a href="https://github.com/dollarshaveclub/scrolldir">
     <img alt="Bower version" src="https://badge.fury.io/bo/scrolldir.svg" />
   </a>
   <a href="https://twitter.com/home?status=ScrollDir%2C%20a%20micro%20JS%20lib%20that%20describes%20vertical%20scroll%20direction.%20https%3A%2F%2Fgithub.com%2Fdollarshaveclub%2Fscrolldir%20by%20%40pfisher42%20co%20%40yowainwright%20%40DSCEngineering">
@@ -80,7 +80,7 @@ bower install scrolldir --save
 ```
 yarn
 ```sh
-yarn add scrolldir 
+yarn add scrolldir
 ```
 
 ## Setup 📤
@@ -114,7 +114,7 @@ scrollDir({ off: true });
 
 To turn provide a different scroll direction on page load (or app start):
 ```javascript
-scrollDir({ direction: 'up' }); // the default is 'down'
+scrollDir({ dir: 'up' }); // the default is 'down'
 ```
 
 ## Example 🌴

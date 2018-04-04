@@ -1,6 +1,6 @@
 {
   "name": "scrolldir",
-  "version": "1.2.22",
+  "version": "1.2.23",
   "description": "Vertical scroll direction in CSS",
   "main": "dist/scrolldir.js",
   "scripts": {
