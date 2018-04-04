@@ -1,6 +1,6 @@
 {
   "name": "scrolldir",
-  "version": "1.2.21",
+  "version": "1.2.22",
   "description": "Vertical scroll direction in CSS",
   "main": "dist/scrolldir.js",
   "scripts": {
@@ -37,13 +37,13 @@
     "es-check": "^2.0.0",
     "eslint": "^4.1.0",
     "gulp": "^3.9.1",
-    "gulp-header": "^1.8.8",
+    "gulp-header": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
-    "node-qunit-phantomjs": "^1.4.0",
-    "rollup": "^0.51.0",
+    "node-qunit-phantomjs": "^2.0.0",
+    "rollup": "^0.57.0",
     "rollup-plugin-babel": "^3.0.0",
-    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-commonjs": "^9.0.0",
     "rollup-plugin-node-resolve": "^3.0.0"
   },
   "peerDependencies": {
