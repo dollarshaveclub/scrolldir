@@ -1,8 +1,15 @@
 {
   "presets": [
-    ["es2015", { "modules": false }]
-  ],
-  "plugins": [
-    "external-helpers"
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            "defaults",
+            "ie >= 9"
+          ]
+        }
+      }
+    ]
   ]
 }
