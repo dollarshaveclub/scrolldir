@@ -18,6 +18,8 @@ export default {
     }),
     commonjs(),
     babel({
+      babelrc: false,
+      presets: [['@babel/preset-env', { modules: false}]],
       exclude: 'node_modules/**',
     }),
   ],
