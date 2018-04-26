@@ -17,7 +17,7 @@ function tick() {
   const furthest = dir === 'down' ? Math.max : Math.min
 
   // Apply bounds to handle rubber banding
-  const yMax = body.offsetHeight - win.innerHeight
+  const yMax = body.scrollHeight - win.innerHeight
   y = Math.max(0, y)
   y = Math.min(yMax, y)
 
