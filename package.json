@@ -34,7 +34,7 @@
     "@babel/preset-env": "^7.0.0-beta.46",
     "bower": "^1.7.9",
     "es-check": "^2.0.0",
-    "eslint": "^4.1.0",
+    "eslint": "^5.0.0",
     "gulp": "^3.9.1",
     "gulp-header": "^2.0.1",
     "gulp-rename": "^1.2.2",
