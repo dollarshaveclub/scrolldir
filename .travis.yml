@@ -19,7 +19,6 @@ install:
   - bower install
 
 before_script:
-  - npm install -g gulp
   - npm install node-qunit-phantomjs
 
-script: gulp test
+script: npm test
