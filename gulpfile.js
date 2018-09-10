@@ -23,17 +23,4 @@ gulp.task('test', () => {
   qunit('tests/off/index.html')
 })
 
-gulp.task('minify', () => {
-  gulp.src('dist/scrolldir.js')
-    .pipe(uglify())
-    .pipe(head(banner, { pkg }))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/'))
-  gulp.src('dist/scrolldir.auto.js')
-    .pipe(uglify())
-    .pipe(head(banner, { pkg }))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/'))
-})
-
-gulp.task('default', ['test', 'minify'])
+gulp.task('default', ['test'])
