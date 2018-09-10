@@ -65,7 +65,7 @@ const createConfig = ({ input, output, env } = {}) => {
         format,
         {
           banner,
-          name,
+          name: 'scrollDir',
         }
       )
     ),
