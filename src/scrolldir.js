@@ -1,11 +1,11 @@
 let attribute = 'data-scrolldir'
 let dir = 'down' // 'up' or 'down'
+let thresholdPixels = 64 // Ignore moves smaller than this.
 let el = document.documentElement
 let win = window
 const body = document.body
 const historyLength = 32 // Ticks to keep in history.
 const historyMaxAge = 512 // History data time-to-live (ms).
-const thresholdPixels = 64 // Ignore moves smaller than this.
 const history = Array(historyLength)
 let e // last scroll event
 let pivot // "high-water mark"
@@ -64,6 +64,7 @@ export default function scrollDir(opts) {
     if (opts.el) el = opts.el
     if (opts.win) win = opts.win
     if (opts.dir) dir = opts.dir
+    if (opts.thresholdPixels) thresholdPixels = opts.thresholdPixels
     // If opts.off, turn it off
     // - set html[data-scrolldir="off"]
     // - remove the event listener

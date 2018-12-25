@@ -117,6 +117,12 @@ To turn provide a different scroll direction on page load (or app start):
 scrollDir({ dir: 'up' }); // the default is 'down'
 ```
 
+To change the `thresholdPixels`—the number of pixels to scroll before re-evaluating the direction:
+```javascript
+scrollDir({ thresholdPixels: someNumber }); // the default is 64 pixels
+// example: scrollDir({ thresholdPixels: 10 })
+```
+
 ## Example 🌴
 
 - [scrolldir](http://codepen.io/yowainwright/pen/9d5a6c6dcf2c17e351dcccfe98158e8b) on codepen.
