@@ -1,6 +1,6 @@
 /**
   scrolldir - Vertical scroll direction in CSS
-  @version v1.4.0
+  @version v1.5.0
   @link https://github.com/dollarshaveclub/scrolldir.git
   @author Patrick Fisher <patrick@pwfisher.com>
   @license MIT
@@ -8,11 +8,13 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.scrollDir = factory());
-}(this, (function () { 'use strict';
+  (global = global || self, global.scrollDir = factory());
+}(this, function () { 'use strict';
 
   var attribute = 'data-scrolldir';
   var dir = 'down'; // 'up' or 'down'
+
+  var thresholdPixels = 64; // Ignore moves smaller than this.
 
   var el = document.documentElement;
   var win = window;
@@ -20,8 +22,6 @@
   var historyLength = 32; // Ticks to keep in history.
 
   var historyMaxAge = 512; // History data time-to-live (ms).
-
-  var thresholdPixels = 64; // Ignore moves smaller than this.
 
   var history = Array(historyLength);
   var e; // last scroll event
@@ -84,7 +84,8 @@
       if (opts.attribute) attribute = opts.attribute;
       if (opts.el) el = opts.el;
       if (opts.win) win = opts.win;
-      if (opts.dir) dir = opts.dir; // If opts.off, turn it off
+      if (opts.dir) dir = opts.dir;
+      if (opts.thresholdPixels) thresholdPixels = opts.thresholdPixels; // If opts.off, turn it off
       // - set html[data-scrolldir="off"]
       // - remove the event listener
 
@@ -104,4 +105,4 @@
 
   return scrollDir;
 
-})));
+}));
