@@ -38,7 +38,7 @@
     "bower": "^1.7.9",
     "es-check": "^5.0.0",
     "eslint": "^6.0.0",
-    "node-qunit-phantomjs": "^2.0.0",
+    "node-qunit-phantomjs": "^2.1.1",
     "qunit": "^2.6.2",
     "rollup": "^1.19.4",
     "rollup-plugin-babel": "^4.0.0-beta.0",
