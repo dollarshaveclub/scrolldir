@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/dollarshaveclub/scrolldir.git",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.46",
+    "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.0.0-beta.46",
     "bower": "^1.7.9",
     "es-check": "^5.0.0",
